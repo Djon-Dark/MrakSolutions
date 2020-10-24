@@ -1,0 +1,12 @@
+[0929/173128.229:ERROR:gles2_cmd_decoder.cc(17817)] [.BrowserCompositor-0000021A7D84BFE0]GL ERROR :GL_INVALID_OPERATION : glCreateAndConsumeTextureCHROMIUM: invalid mailbox name
+[0929/173128.244:ERROR:gles2_cmd_decoder.cc(10372)] [.BrowserCompositor-0000021A7D84BFE0]RENDER WARNING: texture bound to texture unit 0 is not renderable. It maybe non-power-of-2 and have incompatible texture filtering.
+[0929/173128.246:ERROR:gles2_cmd_decoder.cc(17817)] [.BrowserCompositor-0000021A7D84BFE0]GL ERROR :GL_INVALID_OPERATION : glCreateAndConsumeTextureCHROMIUM: invalid mailbox name
+[0929/173128.246:ERROR:gles2_cmd_decoder.cc(10372)] [.BrowserCompositor-0000021A7D84BFE0]RENDER WARNING: texture bound to texture unit 0 is not renderable. It maybe non-power-of-2 and have incompatible texture filtering.
+[0929/173128.246:ERROR:gles2_cmd_decoder.cc(17817)] [.BrowserCompositor-0000021A7D84BFE0]GL ERROR :GL_INVALID_OPERATION : glCreateAndConsumeTextureCHROMIUM: invalid mailbox name
+[0929/173128.246:ERROR:gles2_cmd_decoder.cc(10372)] [.BrowserCompositor-0000021A7D84BFE0]RENDER WARNING: texture bound to texture unit 0 is not renderable. It maybe non-power-of-2 and have incompatible texture filtering.
+[0929/173128.246:ERROR:gles2_cmd_decoder.cc(17817)] [.BrowserCompositor-0000021A7D84BFE0]GL ERROR :GL_INVALID_OPERATION : glCreateAndConsumeTextureCHROMIUM: invalid mailbox name
+[0929/173128.247:ERROR:gles2_cmd_decoder.cc(10372)] [.BrowserCompositor-0000021A7D84BFE0]RENDER WARNING: texture bound to texture unit 0 is not renderable. It maybe non-power-of-2 and have incompatible texture filtering.
+[0929/173128.406:WARNING:angle_platform_impl.cc(52)] compileToBinary(230): 
+C:\fakepath(77,10-42): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+C:\fakepath(99,10-42): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+
