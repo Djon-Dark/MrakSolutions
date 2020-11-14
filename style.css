@@ -1,26 +1,31 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    
-}
+html, body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+ /* NAVIGATION BAR */
 
 nav{
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 9vh;
-    background-color: rgb(13, 13, 13);
-    font-family: 'Poppins', sans-serif;
+    height: 7vh;
+    min-height: 70px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 -10px 20px 0px black;
+    z-index: 5;
 }
 
 .logo{
     display: flex;
-    max-height: 8vh;
+    max-height: 7vh;
     max-width: 400px;
     align-items: center;
-    color: rgb(180, 180, 180);
-    text-transform: uppercase;
+    text-transform: uppercase; 
 }
 
 .logo a{
@@ -28,7 +33,16 @@ nav{
 }
 
 .logo img{
-    max-height: 8vh;
+    max-height: 6vh;
+    min-height: 60px;
+
+}
+
+.logo svg{
+    fill: #000000;
+    stroke: #000000;
+    max-height: 6vh;
+    min-height: 60px;
 }
 
 .nav-links{
@@ -39,16 +53,16 @@ nav{
 }
 
 .nav-links a{
-    color: rgb(180, 180, 180);
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
-    transition: all 300ms linear;
+    transition: all 100ms linear;
+    font-family: 'Poppins', sans-serif;
 }
 
 .nav-links a:hover{
-    color:white;
-    font-weight: 1000;
-       
+    color:rgb(180,180,180);
+    font-weight: 1000;     
 }
 
 .nav-links li{
@@ -57,14 +71,12 @@ nav{
 
 .burger{
     display: none;
-
 }
 
 .burger div{
     width: 30px;
     height: 5px;
-    background-color: rgb(180, 180, 180);
-    margin:5px;
+    background-color: rgb(0, 0, 0);
     transition: all 0.3s ease;
 }
 
@@ -73,17 +85,19 @@ nav{
         overflow-x: hidden;
     }
 
+/* NAV LINKS */
+
     .nav-links{
         position: absolute;
         right: 0px;
-        top: 9vh;
+        top: 7vh;
         height:30vh;
-        background-color: rgb(13, 13, 13);
+        background-color: rgb(255, 255, 255);
         display: flex;
         flex-direction: column;
         align-items: center;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.3s ease;
     }
     
     .nav-links li{
@@ -91,7 +105,10 @@ nav{
     }
 
     .burger{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20px;
         cursor: pointer;
     }
 }
@@ -110,13 +127,107 @@ nav{
         transform: translateX(0px);
     }
 }
-
+/* NAV BURGER */
 .toggle .line1{    
-    transform: rotate(-45deg) translate(-5px,9px);
+    transform: rotate(-45deg) translate(-2px,9px);
 }
 .toggle .line2{    
     opacity: 0;
 }
 .toggle .line3{    
-    transform: rotate(45deg) translate(-5px,-9px);
+    transform: rotate(45deg) translate(-2px,-9px);
+}
+
+
+ /* MAIN */
+
+main{
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    overflow: scroll;
+    height: 100vh;
+    
+}
+
+.carousel {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 100%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.text h1{
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+.text p{
+    margin: 20px 0;
+    font-size: 1.3rem;
+}
+
+/* EACH SLIDE INDIVIDUALLY */
+
+#slide1{
+    background-image: url(./imgs/slide1.jpg);
+    /*
+    background-attachment: fixed;
+    position: sticky;
+    top: 7vh;*/
+
+}
+#slide2{
+    background-image: url(./imgs/slide2.jpg);
+    z-index: 2;
+}
+#slide3{
+    background-image: url(./imgs/slide3.jpg);
+    z-index: 3;
+}
+#slide4{
+    background-image: url(./imgs/slide4.jpg);
+    z-index: 4;
+}
+
+
+/* FOOTER */
+
+footer{
+    z-index: -1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 6vh;
+    min-height: 50px;
+    font-size: 0.7rem;
+    background-color: white;
+    position: sticky;
+    bottom: 0;
+}
+
+footer img{
+    height: 5vh;
+    min-height: 40px;
+    padding: 5px;
+}
+
+.social{
+    display: flex;
+    width: 20vw;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+
+footer a{
+    font-style: none;
+    color: black
 }

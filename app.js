@@ -12,7 +12,7 @@ burger.addEventListener('click', ()=>{
         if(link.style.animation){
             link.style.animation = '';
         } else {
-            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 4}s`;
+            link.style.animation = `navLinkFade 0.2s ease forwards ${index / 8}s`;
         }
     });
     //Burger Animation
@@ -23,3 +23,10 @@ burger.addEventListener('click', ()=>{
 }
 
 navSlide();
+
+const contentSlide = () => {
+    const content = document.querySelector('.content');
+
+    content.addEventListener(setTimeout)
+
+}
