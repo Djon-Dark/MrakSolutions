@@ -90,7 +90,7 @@ nav{
     .nav-links{
         position: absolute;
         right: 0px;
-        top: 7vh;
+        top: 5vh;
         height:30vh;
         background-color: rgb(255, 255, 255);
         display: flex;
@@ -129,13 +129,13 @@ nav{
 }
 /* NAV BURGER */
 .toggle .line1{    
-    transform: rotate(-45deg) translate(-2px,9px);
+    transform: rotate(-45deg) translate(-1px,9px);
 }
 .toggle .line2{    
     opacity: 0;
 }
 .toggle .line3{    
-    transform: rotate(45deg) translate(-2px,-9px);
+    transform: rotate(45deg) translate(-1px,-9px);
 }
 
 
@@ -146,7 +146,7 @@ main{
     position: relative;
     overflow: scroll;
     height: 100vh;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
 }
 
 .carousel {
@@ -162,7 +162,7 @@ main{
     width: 30vw;
     height: 100%;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -184,7 +184,7 @@ main{
 }
 #slide2{
     background-image: url(./imgs/slide2.jpg);
-    background-attachment: fixed;
+    
 }
 #slide3{
     background-image: url(./imgs/slide3.jpg);
@@ -192,9 +192,17 @@ main{
 }
 #slide4{
     background-image: url(./imgs/slide4.jpg);
-    background-attachment: fixed;
+    
 }
 
+/* SLIDEBUTTONS */
+
+.slidebuttons{
+    position: fixed;
+    top: 40vh;
+    right: 2vw;
+    z-index: 5;
+}
 
 /* FOOTER */
 
@@ -227,3 +235,4 @@ footer a{
     font-style: none;
     color: black
 }
+

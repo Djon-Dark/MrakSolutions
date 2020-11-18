@@ -1,3 +1,4 @@
+// BURGER NAVIGATION
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
@@ -18,15 +19,22 @@ burger.addEventListener('click', ()=>{
     //Burger Animation
     burger.classList.toggle('toggle');
 });
-    
-
 }
 
 navSlide();
 
-const contentSlide = () => {
-    const content = document.querySelector('.content');
 
-    content.addEventListener(setTimeout)
+//PARALAX SCROLL
 
-}
+const slide1 = document.querySelector('#slide1');
+const slide2 = document.querySelector('#slide3');
+const main = document.querySelector('main');
+
+main.addEventListener('scroll', function (){
+    let main = document.querySelector('main');
+    let offset= main.scrollTop;
+    
+    slide1.style.backgroundPositionY = offset * -0.5 + 'px';
+    slide2.style.backgroundPositionY = offset * -0.5 + 'px';
+})
+
