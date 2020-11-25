@@ -156,17 +156,19 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    text-align: center;
+
 }
 
 .question h1{
     font-size: 4rem;
+    font-weight: 400;
     color: white;
-    text-shadow: 0.2rem 0.5rem 1rem black;
+    text-shadow: 0.1rem 0.1rem 1rem rgba(255, 255, 255, 0.5);
 }
 
 .one{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/slide1.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),url(./imgs/slide1.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -207,6 +209,7 @@ main{
     width: 30rem;
     height: 30rem;
     overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .smallimg img{
@@ -242,10 +245,11 @@ footer{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 6vh;
+    height: 20rem;
+    width: 100%;
     min-height: 50px;
-    font-size: 0.7rem;
-    background-color: white;
+    background-color: rgb(78, 78, 78);
+    
 }
 
 footer img{
