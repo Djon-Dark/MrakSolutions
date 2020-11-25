@@ -26,15 +26,21 @@ navSlide();
 
 //PARALAX SCROLL
 
-const slide1 = document.querySelector('#slide1');
-const slide2 = document.querySelector('#slide3');
+const one = document.querySelector('.one');
+const two = document.querySelector('.two');
+const three = document.querySelector('.three');
+const four = document.querySelector('.four');
 const main = document.querySelector('main');
 
 main.addEventListener('scroll', function (){
     let main = document.querySelector('main');
     let offset= main.scrollTop;
     
-    slide1.style.backgroundPositionY = offset * -0.5 + 'px';
-    slide2.style.backgroundPositionY = offset * -0.5 + 'px';
+    one.style.backgroundPositionY = offset * -0.1 + 'px';
+    two.style.backgroundPositionY = offset * -0.1 + 'px';
+    /*
+    three.style.backgroundPositionY = offset * -0.2 + 'px';
+    four.style.backgroundPositionY = offset * -0.2 + 'px';
+    */
 })
 
