@@ -31,19 +31,16 @@ const two = document.querySelector('.two');
 const three = document.querySelector('.three');
 const four = document.querySelector('.four');
 const main = document.querySelector('main');
-const h1 = document.querySelectorAll('h1');
+const h1 = document.querySelector('h1');
+
+
 main.addEventListener('scroll', function (){
     let main = document.querySelector('main');
-    let offset= main.scrollTop;
+    let offset = main.scrollTop;
     
     one.style.backgroundPositionY = offset * -0.3 + 'px';
     
     three.style.backgroundPositionY = offset * -0.7 + 'px';
-    
-    
-    /*
-    three.style.backgroundPositionY = offset * -0.2 + 'px';
-    four.style.backgroundPositionY = offset * -0.2 + 'px';
-    */
+
 })
 
