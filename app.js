@@ -27,20 +27,40 @@ navSlide();
 //PARALAX SCROLL
 
 const one = document.querySelector('.one');
-const two = document.querySelector('.two');
 const three = document.querySelector('.three');
-const four = document.querySelector('.four');
 const main = document.querySelector('main');
-const h1 = document.querySelector('h1');
+
+
+/*  PARALLAX ZA H1 DOBAR, RADI
+function parallax(element, distance, speed){
+    const item = document.querySelector(element);
+    item.style.transform = `translateY(${distance * speed}px)`;
+}
+*/
+
+function parallax(element, distance, speed){
+    const item = document.querySelector(element);
+    const elementTopDistance = item.getBoundingClientRect().top;
+    const center = window.innerHeight / 2;
+        if(elementTopDistance <= center){
+          item.style.transform = `translateY(${distance * speed}px)`;  
+        }
+    
+}
 
 
 main.addEventListener('scroll', function (){
     let main = document.querySelector('main');
-    let offset = main.scrollTop;
-    
-    one.style.backgroundPositionY = offset * -0.3 + 'px';
-    
-    three.style.backgroundPositionY = offset * -0.7 + 'px';
+    let scrolldistance = main.scrollTop; 
+    one.style.backgroundPositionY = scrolldistance * -0.3 + 'px';
+    three.style.backgroundPositionY = scrolldistance * -0.7 + 'px';
+
+//DODAJ NEKI SCROLL COUNTER S KOJIM CES RESETIRATI SCROLLDISTANCE
+
+    parallax('.q1', scrolldistance, 0.5);
+    parallax('.q2', scrolldistance, 0.5);
+    parallax('.q3', scrolldistance, 0.5);
 
 })
+
 
