@@ -23,13 +23,10 @@ burger.addEventListener('click', ()=>{
 
 navSlide();
 
-
-//PARALAX SCROLL
-
-const one = document.querySelector('.one');
-const three = document.querySelector('.three');
 const main = document.querySelector('main');
-
+const questionH1 = document.querySelectorAll('.questionH1');
+const text = document.querySelectorAll('.text');
+const smallimg = document.querySelectorAll('.smallimg');
 
 /*  PARALLAX ZA H1 DOBAR, RADI
 function parallax(element, distance, speed){
@@ -38,29 +35,67 @@ function parallax(element, distance, speed){
 }
 */
 
-function parallax(element, distance, speed){
-    const item = document.querySelector(element);
-    const elementTopDistance = item.getBoundingClientRect().top;
-    const center = window.innerHeight / 2;
-        if(elementTopDistance <= center){
-          item.style.transform = `translateY(${distance * speed}px)`;  
-        }
-    
-}
-
 
 main.addEventListener('scroll', function (){
     let main = document.querySelector('main');
     let scrolldistance = main.scrollTop; 
-    one.style.backgroundPositionY = scrolldistance * -0.3 + 'px';
-    three.style.backgroundPositionY = scrolldistance * -0.7 + 'px';
 
-//DODAJ NEKI SCROLL COUNTER S KOJIM CES RESETIRATI SCROLLDISTANCE
+    //BACKGROUND PARALLAX
+    const one = document.querySelector('.one');
+    one.style.backgroundPositionY = scrolldistance * -0.5 + 'px';
 
-    parallax('.q1', scrolldistance, 0.5);
-    parallax('.q2', scrolldistance, 0.5);
-    parallax('.q3', scrolldistance, 0.5);
 
-})
+/**/
+    //CHECKS IF ELEMENT IS IN VIEW AND FADES IN WITH SCROLL
+    const fadeOut = element =>{
+        let top = element.getBoundingClientRect().top;
+        let bot = window.innerHeight - element.getBoundingClientRect().bottom;
+      
+        if(bot > 50){
+            element.style.display = 'none';
+        } else {
+            element.style.display = 'block';
+        }
+        console.log('bot: '+bot);
+    }
+
+     //CHECKS IF ELEMENT IS IN VIEW AND FADES IN
+     const fadeIn = element =>{
+        let top = element.getBoundingClientRect().top;
+        let bot = window.innerHeight - element.getBoundingClientRect().bottom;
+      
+        if(top > -100 && bot > -100){
+            element.style.animation = 'h1Fade 1s ease-in';
+            element.style.opacity = 1;
+        }
+    }
+
+    //SLIDE IN FROM INVISIBLE TEXT
+    const slideIn = element =>{
+        let top = element.getBoundingClientRect().top;
+        let bot = window.innerHeight - element.getBoundingClientRect().bottom;
+      
+        if(top > 0 && bot > 0){
+            element.style.animation = 'h1Fade 0.5s linear, slideIn 0.5s ease-out';
+            element.style.opacity = 1;
+        }
+    }
+
+    
+   
+    //ACTIVATION OF ANIMATION FUNCTIONS
+    smallimg.forEach(element => fadeIn(element));
+    questionH1.forEach(element => fadeIn(element));
+    text.forEach(element => slideIn(element));
+   
+   //ARROW DISSAPEAR
+    const arrow = document.querySelector('.arrow');
+    fadeOut(arrow);
+  
+
+});
+
+//TO DO:
+// -DRUGU SLIKU TREBA S JACOM REZOLUCIJOM
 
 

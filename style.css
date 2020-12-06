@@ -144,9 +144,72 @@ main{
     font-family: 'Raleway', sans-serif;
     position: relative;
     overflow: scroll;
-    height: 100vh;
+    height: 93vh;
+
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(500px);
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+
+@keyframes h1Fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn{
+    from{
+        transform: translateX(-50px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+/* ARROW BOUNCE*/
+@keyframes bounce {
+    10%{
+        opacity: 1;
+    }
+
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+i{
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+  }
+.arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -20px;
+    opacity: 0;
+    width: 40px;
+    height: 60px; 
+    /*change with size of arrow to make sit on bottom */
+    /*   background-image: url(); */
+    /*   background-size: contain; */
+  }
+  
+.bounce {
+    animation: bounce 2s infinite;
+    animation-delay: 5s;
+  }
 
 /* QUESTIONS-- */
 .question{
@@ -156,20 +219,28 @@ main{
     align-items: center;
     justify-content: center;
     text-align: center;
-
+    scroll-snap-align: start;
+   
 }
-
 
 .question h1{
     font-size: 4rem;
     font-weight: 400;
     color: white;
     text-shadow: 0.1rem 0.1rem 1rem rgba(255, 255, 255, 0.5);
-    animation: fadeIn 1s ease-in;
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    opacity: 0;
+}
+
+#q1{
+    animation: h1Fade 1s ease-in;
+    opacity: 1;
 }
 
 .one{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),url(./imgs/slide1.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),url(./imgs/slike\ mikrocement/q1.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -199,18 +270,26 @@ main{
     justify-content: space-evenly;
     align-items: center;
     height: 35rem;
+    scroll-snap-align: end;
+    padding: 0 3rem;
 }
 
 .text{
     width: 40rem;
+    min-width: 18rem;
     font-size: 1.5rem;
+    opacity: 0;
+    padding-right: 2rem;
 }
 
 .smallimg{
     width: 30rem;
     height: 30rem;
+    min-width: 480px;
     overflow: hidden;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    border-radius: 5px;
 }
 
 .smallimg img{
@@ -249,8 +328,8 @@ footer{
     height: 20rem;
     width: 100%;
     min-height: 50px;
-    background-color: rgb(78, 78, 78);
-    
+    background-color: rgb(255, 255, 255);
+    scroll-snap-align: end;
 }
 
 footer img{
@@ -266,8 +345,29 @@ footer img{
     font-size: 1.5rem;
 }
 
+.social i{
+    color: black;
+    height: 2.3rem;
+    width: 2.3rem;
+    text-align: center;
+    line-height: 2.4rem;
+    border-radius: 2rem;;
+    
+}
+
+.social i:hover{
+    background: black;
+    background-size: fill;
+    color: white;
+    box-shadow: 0 0px 1px 2px rgba(0, 0, 0);
+    transition: all 200ms ease-in-out;
+}
+
 footer a{
     font-style: none;
     color: black
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
