@@ -307,7 +307,7 @@ footer a{
     .nav-links{
         position: absolute;
         right: 0px;
-        top: 5vh;
+        top: 7vh;
         height:30vh;
         width: 20%;
         padding-right: 2rem;
@@ -318,6 +318,7 @@ footer a{
         justify-content: space-around;
         transform: translateX(100%);
         transition: transform 0.3s ease;
+        box-shadow: -1px 5px  20px rgb(0,0,0,0.5);
     }
     
     .nav-links li{
@@ -361,7 +362,6 @@ footer a{
 .nav-active{
     transform: translateX(0%);
 }
-
 
 /* NAV BURGER */
 .toggle .line1{    
