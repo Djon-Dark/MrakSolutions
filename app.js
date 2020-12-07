@@ -96,6 +96,8 @@ main.addEventListener('scroll', function (){
 });
 
 //TO DO:
-
+// -CENTRIRATI STRELICU NA DNO STRANICE
+// -UREDITI TEKST
+// -MEDIA QUERY ZA ULTRAWIDE, JER IZGLEDA MALO PEDERSKI TRENUTNO
 
 

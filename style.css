@@ -45,8 +45,8 @@ nav{
 
 .nav-links{
     display: flex;
-    width: 40%;
-    justify-content: space-around;
+    width: 50%;
+    justify-content: space-between;
     transition: all 750ms linear 200ms;
 }
 
@@ -79,65 +79,6 @@ nav{
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width:768px){
-    body{
-        overflow-x: hidden;
-    }
-
-/* NAV LINKS */
-
-    .nav-links{
-        position: absolute;
-        right: 0px;
-        top: 5vh;
-        height:30vh;
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-    }
-    
-    .nav-links li{
-        opacity: 0;
-    }
-
-    .burger{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 20px;
-        cursor: pointer;
-    }
-}
-
-.nav-active{
-    transform: translateX(0%);
-}
-
-@keyframes navLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-/* NAV BURGER */
-.toggle .line1{    
-    transform: rotate(-45deg) translate(-1px,9px);
-}
-.toggle .line2{    
-    opacity: 0;
-}
-.toggle .line3{    
-    transform: rotate(45deg) translate(-1px,-9px);
-}
-
-
  /* MAIN */
 
 main{
@@ -151,6 +92,17 @@ main{
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     overflow-x: hidden;
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 @keyframes h1Fade{
@@ -170,7 +122,6 @@ main{
         transform: translateX(0);
     }
 }
-
 
 /* ARROW BOUNCE*/
 @keyframes bounce {
@@ -193,6 +144,7 @@ i{
     display: block;
     color: rgba(255, 255, 255, 0.5);
   }
+
 .arrow {
     position: absolute;
     bottom: 0;
@@ -201,9 +153,6 @@ i{
     opacity: 0;
     width: 40px;
     height: 60px; 
-    /*change with size of arrow to make sit on bottom */
-    /*   background-image: url(); */
-    /*   background-size: contain; */
   }
   
 .bounce {
@@ -269,7 +218,7 @@ i{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 35rem;
+    height: 100vh;
     scroll-snap-align: end;
     padding: 0 3rem;
 }
@@ -297,26 +246,6 @@ i{
     width: 100%;
 }
 /* --ANSWERS */
-
-
-/* EACH SLIDE INDIVIDUALLY */
-
-#slide1{
-    background-image: url(./imgs/slide1.jpg);
-    background-attachment: fixed;
-}
-#slide2{
-    background-image: url(./imgs/slide2.jpg);
-    
-}
-#slide3{
-    background-image: url(./imgs/slide3.jpg);
-    background-attachment: fixed;
-}
-#slide4{
-    background-image: url(./imgs/slide4.jpg);
-    
-}
 
 
 /* FOOTER */
@@ -356,7 +285,7 @@ footer img{
 }
 
 #facebook:hover{
-    color:#2D88FF;  
+    color: #0261DB;  
 }
 
 footer a{
@@ -366,4 +295,81 @@ footer a{
 
 ::-webkit-scrollbar{
     display: none;
+}
+
+
+/* -- MEDIA QUERIES -- */
+@media screen and (max-width:1024px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        top: 5vh;
+        height:30vh;
+        width: 20%;
+        padding-right: 2rem;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .burger{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .answer{
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .text{
+        margin-top: 7vh;
+        width: 90%;
+    }
+
+    .smallimg{
+        min-height: 500px;
+    }
+}
+
+@media screen and (max-width:1024px) and (max-height: 859px){
+    .text{
+        margin-top: 7vh;
+        width: 90%;
+        
+    }
+    .smallimg{
+        display: none;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+
+/* NAV BURGER */
+.toggle .line1{    
+    transform: rotate(-45deg) translate(-1px,9px);
+}
+.toggle .line2{    
+    opacity: 0;
+}
+.toggle .line3{    
+    transform: rotate(45deg) translate(-1px,-9px);
 }
