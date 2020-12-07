@@ -96,6 +96,6 @@ main.addEventListener('scroll', function (){
 });
 
 //TO DO:
-// -DRUGU SLIKU TREBA S JACOM REZOLUCIJOM
+
 
 
