@@ -189,25 +189,25 @@ i{
 }
 
 .one{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),url(./imgs/slike\ mikrocement/Q1.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),url(./imgs/Q1.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
 
 .two{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/slike\ mikrocement/Q2.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q2.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
 
 .three{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/slike\ mikrocement/Q3.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q3.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
 
 .four{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/slike\ mikrocement/Q4.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q4.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
