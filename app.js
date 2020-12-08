@@ -44,9 +44,7 @@ main.addEventListener('scroll', function (){
     const one = document.querySelector('.one');
     one.style.backgroundPositionY = scrolldistance * -0.5 + 'px';
 
-
-/**/
-    //CHECKS IF ELEMENT IS IN VIEW AND FADES IN WITH SCROLL
+    //ARROW FADE OUT AFTER FIRST SCROLL
     const fadeOut = element =>{
         let top = element.getBoundingClientRect().top;
         let bot = window.innerHeight - element.getBoundingClientRect().bottom;
@@ -56,7 +54,6 @@ main.addEventListener('scroll', function (){
         } else {
             element.style.display = 'block';
         }
-        console.log('bot: '+bot);
     }
 
      //CHECKS IF ELEMENT IS IN VIEW AND FADES IN
