@@ -396,7 +396,6 @@ footer a{
 
     main{
         height: 100vh;
-        scroll-snap-type: y proximity;
     }
 
     .question{
@@ -406,23 +405,36 @@ footer a{
     .question h1{
         font-size: 2.5rem;
     }
+
+    .answer{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
     .text{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        width: 100%;
+        font-size: 1.2rem;
         margin: 0;
         padding: 0;
     }
-    .footer{
-        display: flex;
+
+    .text p{
+        margin: 2rem 1rem;
+    }
+    
+    footer{
+        height: 30%;
         flex-direction: column;
+    }
+
+    .social{
+        width: 100%;
     }
 }
 
 .nav-active{
     transform-origin: top;
-    
     transform: scale(1,1);
     opacity: 0.95;
     transition: all 0.5s ease;
