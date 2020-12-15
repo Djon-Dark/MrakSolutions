@@ -7,15 +7,6 @@ const navSlide = () => {
 burger.addEventListener('click', ()=>{    
     //Toggle nav
         nav.classList.toggle('nav-active');
-
-    //Animate links
-    navLinks.forEach((link, index)=>{
-        if(link.style.animation){
-            link.style.animation = '';
-        } else {
-            link.style.animation = `navLinkFade 0.2s ease forwards ${index / 8}s`;
-        }
-    });
     //Burger Animation
     burger.classList.toggle('toggle');
 });
@@ -48,7 +39,7 @@ main.addEventListener('scroll', function (){
     if(prevScrollPos > currentScrollPos){
         nav.style.top = "0"
     } else {
-      nav.style.top = "-9vh";
+      nav.style.top = "-3rem";
     }
     prevScrollPos = currentScrollPos;
     

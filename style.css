@@ -50,7 +50,6 @@ nav{
     display: flex;
     width: 50%;
     justify-content: space-between;
-    transition: all 750ms linear 200ms;
 }
 
 .nav-links a{
@@ -318,15 +317,17 @@ footer a{
         transform-origin: top;
         transform: scale(1,0);
         transition: all 0.5s ease;
-        /*box-shadow: 2px 4px 10px rgb(0,0,0,0.5);  in case of non full screen navlinks*/
-    }
-    
-    .nav-links li{
-        opacity: 0;
     }
 
     .nav-links a{
         font-size: 1.5rem;
+        opacity: 0;
+    }
+
+    .nav-active a{
+        opacity: 1;
+        transform: translateY(-1rem);
+        transition: all 0.5s ease;
     }
 
     .burger{
@@ -377,17 +378,14 @@ footer a{
     }
 
     .logo img{
-        height: 2.8rem;
+        height: 2.7rem;
     }
 
     .nav-links{
-        opacity: 0;
-        position: fixed;
         top: 3rem;
-        height: 100vh;
     }
 
-    .nav-links a{
+    .nav-active a{
         font-size: 1.5rem;
     }
 
@@ -399,7 +397,7 @@ footer a{
     }
 
     main{
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .question{
@@ -441,8 +439,8 @@ footer a{
     transform-origin: top;
     transform: scale(1,1);
     opacity: 1;
-    transition: all 0.5s ease;
 }
+
 
 /* NAV BURGER */
 .toggle .line1{    
