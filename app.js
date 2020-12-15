@@ -106,6 +106,9 @@ main.addEventListener('scroll', function (){
 });
 
 //TO DO:
+
+// -iPhone still bugged out, viewport not showing correctly for address bar and controls
+
 // -CENTRIRATI STRELICU NA DNO STRANICE
 // -UREDITI TEKST
 // -MEDIA QUERY ZA ULTRAWIDE, JER IZGLEDA MALO PEDERSKI TRENUTNO
