@@ -105,6 +105,12 @@ main.addEventListener('scroll', function (){
 
 });
 
+window.onresize = function() {
+    document.body.height = window.innerHeight;
+    main.style.height = window.innerHeight;
+}
+window.onresize();
+
 //TO DO:
 
 // -iPhone still bugged out, viewport not showing correctly for address bar and controls
