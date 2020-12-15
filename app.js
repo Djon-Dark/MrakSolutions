@@ -112,5 +112,5 @@ main.addEventListener('scroll', function (){
 
 // -MEDIA QUERY ZA LANDSCAPE MODE NA MOBITELIMA
 // -mozda maknuti scroll snap za neke situacije, pogledaj cemherovu stranicu
-
+// -mozda dodati blur efekt sa filter: blur(8px)
 

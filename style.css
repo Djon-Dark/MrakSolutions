@@ -8,6 +8,9 @@ body {
     margin:0;
     padding: 0;
     overflow: hidden;
+    min-height: 100vh;
+  /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
   }
 
  /* NAVIGATION BAR */
@@ -89,8 +92,6 @@ main{
     position: relative;
     overflow: scroll;
     height: 93vh;
-    scroll-snap-type: mandatory;
-    scroll-snap-points-y: repeat(500px);
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -395,6 +396,7 @@ footer a{
 
     main{
         height: 100vh;
+        scroll-snap-type: y proximity;
     }
 
     .question{
