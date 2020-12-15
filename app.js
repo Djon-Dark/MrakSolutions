@@ -36,9 +36,22 @@ function parallax(element, distance, speed){
 */
 
 
+let prevScrollPos = main.scrollTop; //to hide navbar, this must be outside of scroll event listener
+
 main.addEventListener('scroll', function (){
     let main = document.querySelector('main');
     let scrolldistance = main.scrollTop; 
+
+    //HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
+    let currentScrollPos = scrolldistance;
+    const nav = document.querySelector("nav");
+    if(prevScrollPos > currentScrollPos){
+        nav.style.top = "0"
+    } else {
+      nav.style.top = "-9vh";
+    }
+    prevScrollPos = currentScrollPos;
+    
 
     //BACKGROUND PARALLAX
     const one = document.querySelector('.one');
@@ -96,7 +109,8 @@ main.addEventListener('scroll', function (){
 // -CENTRIRATI STRELICU NA DNO STRANICE
 // -UREDITI TEKST
 // -MEDIA QUERY ZA ULTRAWIDE, JER IZGLEDA MALO PEDERSKI TRENUTNO
-// -MEDIA QUERY ZA IPHONE/MOBITELE, IZGLEDA KO KURAC, SVE SE LOMI
+
 // -MEDIA QUERY ZA LANDSCAPE MODE NA MOBITELIMA
-// -POLOZAJ BURGER LINKOVA JEBE TO STA JE MIN HEIGHT NAVBARA NAMJESTEN, PA 7VH NE ODGOVARA UVIJEK, NE POKLAPA SE DOBRO
+// -mozda maknuti scroll snap za neke situacije, pogledaj cemherovu stranicu
+
 
