@@ -426,8 +426,9 @@ footer a{
     }
     
     footer{
-        height: 30%;
+        height: 50%;
         flex-direction: column;
+        padding-bottom: 5rem;
     }
 
     .social{

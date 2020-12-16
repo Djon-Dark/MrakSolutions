@@ -15,6 +15,8 @@ burger.addEventListener('click', ()=>{
 navSlide();
 
 const main = document.querySelector('main');
+const question = document.querySelector('.question');
+const answer = document.querySelector('.answer');
 const questionH1 = document.querySelectorAll('.questionH1');
 const text = document.querySelectorAll('.text');
 const smallimg = document.querySelectorAll('.smallimg');
@@ -97,8 +99,12 @@ main.addEventListener('scroll', function (){
 });
 
 window.onresize = function() {
+    let avh = window.innerHeight * 0.01;
     document.body.height = window.innerHeight;
     main.style.height = window.innerHeight;
+    question.style.height = window.innerHeight;
+    answer.style.height = window.innerHeight;
+
 }
 window.onresize();
 
