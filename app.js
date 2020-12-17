@@ -32,8 +32,8 @@ function parallax(element, distance, speed){
 // ON IOS, ACCOUT FOR NAV-BUTTONS AND ADDRESS BAR
 var isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 if (isiOS){
- question.style.height = '90vh';
- navactive.style.height = '90vh';
+ question.style.height = '500px';
+ navactive.style.height = '500px';
 }
 
 
