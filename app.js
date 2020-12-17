@@ -32,16 +32,21 @@ function parallax(element, distance, speed){
 // ON IOS, ACCOUT FOR NAV-BUTTONS AND ADDRESS BAR
 var isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 if (isiOS){
- question.style.height = '500px';
- navactive.style.height = '500px';
+ question.style.height = '100px';
+ navactive.style.height = '100px';
 }
 
 
 let prevScrollPos = main.scrollTop; //to hide navbar, this must be outside of scroll event listener
 
-main.addEventListener('scroll', function (){
+//function checkPos() { 
+
+main.addEventListener('scroll', function (){//REPLACED BY SETINTERVAL: 
+
+ 
     let main = document.querySelector('main');
     let scrolldistance = main.scrollTop; 
+    scrolled = main.scrollTop;
 
     //HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
     let currentScrollPos = scrolldistance;
@@ -105,6 +110,8 @@ main.addEventListener('scroll', function (){
     const arrow = document.querySelector('.arrow');
     fadeOut(arrow);
 });
+
+//scrollIntervalID = setInterval(checkPos, 10);
 
 window.onresize = function() {
     document.body.height = window.innerHeight;
