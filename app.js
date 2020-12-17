@@ -20,6 +20,7 @@ const answer = document.querySelector('.answer');
 const questionH1 = document.querySelectorAll('.questionH1');
 const text = document.querySelectorAll('.text');
 const smallimg = document.querySelectorAll('.smallimg');
+const navactive = document.querySelector('.nav-active');
 
 /*  PARALLAX ZA H1 DOBAR, RADI
 function parallax(element, distance, speed){
@@ -27,6 +28,13 @@ function parallax(element, distance, speed){
     item.style.transform = `translateY(${distance * speed}px)`;
 }
 */
+
+// ON IOS, ACCOUT FOR NAV-BUTTONS AND ADDRESS BAR
+var isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+if (isiOS){
+ question.style.height = '90vh';
+ navactive.style.height = '90vh';
+}
 
 
 let prevScrollPos = main.scrollTop; //to hide navbar, this must be outside of scroll event listener
@@ -45,10 +53,14 @@ main.addEventListener('scroll', function (){
     }
     prevScrollPos = currentScrollPos;
     
+     // BYPASS PARALLAX EFFECT ON MOBILE
+    var ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    if (!ismobile){
 
     //BACKGROUND PARALLAX
     const one = document.querySelector('.one');
     one.style.backgroundPositionY = scrolldistance * -0.5 + 'px';
+    }
 
     //ARROW FADE OUT AFTER FIRST SCROLL
     const fadeOut = element =>{
@@ -84,8 +96,6 @@ main.addEventListener('scroll', function (){
         }
     }
 
-    
-   
     //ACTIVATION OF ANIMATION FUNCTIONS
     smallimg.forEach(element => fadeIn(element));
     questionH1.forEach(element => fadeIn(element));
@@ -94,12 +104,9 @@ main.addEventListener('scroll', function (){
    //ARROW DISSAPEAR
     const arrow = document.querySelector('.arrow');
     fadeOut(arrow);
-  
-
 });
 
 window.onresize = function() {
-    let avh = window.innerHeight * 0.01;
     document.body.height = window.innerHeight;
     main.style.height = window.innerHeight;
     question.style.height = window.innerHeight;
