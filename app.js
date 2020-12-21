@@ -20,7 +20,7 @@ const answer = document.querySelector('.answer');
 const questionH1 = document.querySelectorAll('.questionH1');
 const text = document.querySelectorAll('.text');
 const smallimg = document.querySelectorAll('.smallimg');
-const navactive = document.querySelector('.nav-active');
+const navactive = document.querySelector('.nav-links');
 
 /*  PARALLAX ZA H1 DOBAR, RADI
 function parallax(element, distance, speed){
@@ -29,35 +29,16 @@ function parallax(element, distance, speed){
 }
 */
 
-// ON IOS, ACCOUT FOR NAV-BUTTONS AND ADDRESS BAR
-var isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-if (isiOS){
- question.style.height = window.innerHeight;
- navactive.style.height = window.innerHeight;
-}
 
 
-let prevScrollPos = main.scrollTop; //to hide navbar, this must be outside of scroll event listener
 
-//function checkPos() { 
 
-main.addEventListener('scroll', function (){//REPLACED BY SETINTERVAL: 
+//main.addEventListener('scroll', function (){//REPLACED BY SETINTERVAL: 
 
- 
+setInterval(function(){ 
     let main = document.querySelector('main');
     let scrolldistance = main.scrollTop; 
-    scrolled = main.scrollTop;
 
-    //HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
-    let currentScrollPos = scrolldistance;
-    const nav = document.querySelector("nav");
-    if(prevScrollPos > currentScrollPos){
-        nav.style.top = "0"
-    } else {
-      nav.style.top = "-3rem";
-    }
-    prevScrollPos = currentScrollPos;
-    
      // BYPASS PARALLAX EFFECT ON MOBILE
     var ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
     if (!ismobile){
@@ -66,6 +47,21 @@ main.addEventListener('scroll', function (){//REPLACED BY SETINTERVAL:
     const one = document.querySelector('.one');
     one.style.backgroundPositionY = scrolldistance * -0.5 + 'px';
     }
+
+    //HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
+    /*
+    let prevScrollPos = main.scrollTop; //to hide navbar, this must be outside of scroll event listener
+    if(ismobile){
+        let currentScrollPos = scrolldistance;
+        const nav = document.querySelector("nav");
+        if(prevScrollPos > currentScrollPos){
+            nav.style.top = "0"
+        } else {
+        nav.style.top = "-3rem";
+        }
+        prevScrollPos = currentScrollPos;
+    }
+    */
 
     //ARROW FADE OUT AFTER FIRST SCROLL
     const fadeOut = element =>{
@@ -109,9 +105,7 @@ main.addEventListener('scroll', function (){//REPLACED BY SETINTERVAL:
    //ARROW DISSAPEAR
     const arrow = document.querySelector('.arrow');
     fadeOut(arrow);
-});
-
-//scrollIntervalID = setInterval(checkPos, 10);
+}, 30);
 
 window.onresize = function() {
     document.body.height = window.innerHeight;
@@ -132,5 +126,5 @@ window.onresize();
 
 // -MEDIA QUERY ZA LANDSCAPE MODE NA MOBITELIMA
 // -mozda maknuti scroll snap za neke situacije, pogledaj cemherovu stranicu
-// -mozda dodati blur efekt sa filter: blur(8px)
+
 
