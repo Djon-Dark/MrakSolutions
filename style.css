@@ -410,27 +410,44 @@ footer a{
         height: 100%;
     }
 
+    .questionwrapper{
+        height: 100%;
+        width: 100%;
+    }
+
     .question h1{
         font-size: 2.5rem;
     }
 
     .one{
-        background-image: url('./imgs/Q1small.jpg');
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),url(./imgs/Q1.jpg);
+        background-size: cover;
+        
     }
+    
     .two{
-        background-image: url('./imgs/Q2small.jpg');
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q2.jpg);
+        background-size: cover;
+        
     }
+    
     .three{
-        background-image: url('./imgs/Q3small.jpg');
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q3.jpg);
+        background-size: cover;
+        
     }
+    
     .four{
-        background-image: url('./imgs/Q4small.jpg');
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q4.jpg);
+        background-size: cover;
+        
     }
 
     .answer{
         width: 100%;
         padding: 0;
         margin: 0;
+        background-color: white;
     }
 
     .text{
