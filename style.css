@@ -414,6 +414,19 @@ footer a{
         font-size: 2.5rem;
     }
 
+    .one{
+        background-image: url('./imgs/Q1small.jpg');
+    }
+    .two{
+        background-image: url('./imgs/Q2small.jpg');
+    }
+    .three{
+        background-image: url('./imgs/Q3small.jpg');
+    }
+    .four{
+        background-image: url('./imgs/Q4small.jpg');
+    }
+
     .answer{
         width: 100%;
         padding: 0;
