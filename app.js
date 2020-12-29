@@ -45,10 +45,7 @@ const debounce = (func, wait) => {
 // TREBA MAKNUTI DEBOUNCE SA NORMALNOG EKRANA, PUSTITI SAMO NA MOBITELU
 let prevScrollPos = window.pageYOffset; //to hide navbar, this must be outside of scroll event listener
 window.addEventListener('scroll', () => {
-    let ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     let scrolldistance = window.pageYOffset;
-    console.log('scrolldistance: ' + scrolldistance);
-
     // BYPASS PARALLAX EFFECT ON MOBILE
     if (!ismobile) {
     // BACKGROUND PARALLAX
@@ -58,7 +55,7 @@ window.addEventListener('scroll', () => {
 });
     // HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
 
-window.addEventListener('scroll', ()=>{
+window.addEventListener('scroll', debounce(()=>{
     if (ismobile) {
         const nav = document.querySelector("nav");
         let scrolldistance = window.pageYOffset;
@@ -70,7 +67,8 @@ window.addEventListener('scroll', ()=>{
         }
         prevScrollPos = currentScrollPos;
     }
-});      
+    
+},250));      
 
 
 setInterval(function(){ 
