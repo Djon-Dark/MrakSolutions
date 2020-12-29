@@ -1,12 +1,11 @@
 // BURGER NAVIGATION
 const navSlide = () => {
     const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
+    const navLinks = document.querySelector('.nav-links');
 
 burger.addEventListener('click', ()=>{    
     //Toggle nav
-        nav.classList.toggle('nav-active');
+        navLinks.classList.toggle('nav-active');
     //Burger Animation
     burger.classList.toggle('toggle');
 });
@@ -14,14 +13,14 @@ burger.addEventListener('click', ()=>{
 
 navSlide();
 
-const main = document.querySelector('main');
+const body = document.querySelector('body');
 const question = document.querySelector('.question');
 const answer = document.querySelector('.answer');
 const questionH1 = document.querySelectorAll('.questionH1');
 const text = document.querySelectorAll('.text');
 const smallimg = document.querySelectorAll('.smallimg');
 const navactive = document.querySelector('.nav-links');
-
+const nav = document.querySelector('nav');
 /*  PARALLAX ZA H1 DOBAR, RADI
 function parallax(element, distance, speed){
     const item = document.querySelector(element);
@@ -32,40 +31,51 @@ function parallax(element, distance, speed){
 
 
 
+const debounce = (func, wait) => {
+    let timeout;
+    return function () {
+        if(!timeout){
+            func();
+            timeout = setTimeout( ()=> timeout = null, wait);
+        }
+    };
+  };
 
-//main.addEventListener('scroll', function (){//REPLACED BY SETINTERVAL: 
+  let ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+// TREBA MAKNUTI DEBOUNCE SA NORMALNOG EKRANA, PUSTITI SAMO NA MOBITELU
+let prevScrollPos = window.pageYOffset; //to hide navbar, this must be outside of scroll event listener
+window.addEventListener('scroll', () => {
+    let ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    let scrolldistance = window.pageYOffset;
+    console.log('scrolldistance: ' + scrolldistance);
 
-setInterval(function(){ 
-    let main = document.querySelector('main');
-    let scrolldistance = main.scrollTop; 
-
-     // BYPASS PARALLAX EFFECT ON MOBILE
-    var ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-    if (!ismobile){
-
-    //BACKGROUND PARALLAX
-    const one = document.querySelector('.one');
-    one.style.backgroundPositionY = scrolldistance * -0.5 + 'px';
+    // BYPASS PARALLAX EFFECT ON MOBILE
+    if (!ismobile) {
+    // BACKGROUND PARALLAX
+        const one = document.querySelector('.one');
+        one.style.backgroundPositionY = scrolldistance * -0.5 + 'px';
     }
+});
+    // HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
 
-    //HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
-    /*
-    let prevScrollPos = main.scrollTop; //to hide navbar, this must be outside of scroll event listener
-    if(ismobile){
-        let currentScrollPos = scrolldistance;
+window.addEventListener('scroll', ()=>{
+    if (ismobile) {
         const nav = document.querySelector("nav");
-        if(prevScrollPos > currentScrollPos){
-            nav.style.top = "0"
+        let scrolldistance = window.pageYOffset;
+        let currentScrollPos = scrolldistance;             
+        if(prevScrollPos > currentScrollPos || currentScrollPos < 20){
+        nav.style.top = "0";
         } else {
         nav.style.top = "-3rem";
         }
         prevScrollPos = currentScrollPos;
     }
-    */
+});      
 
+
+setInterval(function(){ 
     //ARROW FADE OUT AFTER FIRST SCROLL
     const fadeOut = element =>{
-        let top = element.getBoundingClientRect().top;
         let bot = window.innerHeight - element.getBoundingClientRect().bottom;
       
         if(bot > 50){
@@ -107,24 +117,16 @@ setInterval(function(){
     fadeOut(arrow);
 }, 30);
 
-window.onresize = function() {
+//NISAM ZICER AKO OVO RADI
+/*
+const resize = () => {
     document.body.height = window.innerHeight;
-    main.style.height = window.innerHeight;
+    body.style.height = window.innerHeight;
     question.style.height = window.innerHeight;
     answer.style.height = window.innerHeight;
-
 }
-window.onresize();
+window.onresize = resize();
+*/
 
-//TO DO:
-
-// -iPhone still bugged out, viewport not showing correctly for address bar and controls
-
-// -CENTRIRATI STRELICU NA DNO STRANICE
-// -UREDITI TEKST
-// -MEDIA QUERY ZA ULTRAWIDE, JER IZGLEDA MALO PEDERSKI TRENUTNO
-
-// -MEDIA QUERY ZA LANDSCAPE MODE NA MOBITELIMA
-// -mozda maknuti scroll snap za neke situacije, pogledaj cemherovu stranicu
 
 

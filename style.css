@@ -4,20 +4,22 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;;
     margin:0;
     padding: 0;
-    overflow: hidden;
+    
   }
 
  /* NAVIGATION BAR */
 
 nav{
-    position: sticky;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 5rem;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 -10px 20px 0px black;
     z-index: 10;
@@ -82,16 +84,6 @@ nav{
 }
 
  /* MAIN */
-
-main{
-    font-family: 'Raleway', sans-serif;
-    position: relative;
-    overflow: scroll;
-    height: 93vh;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
 
 @keyframes navLinkFade{
     from{
@@ -162,7 +154,7 @@ i{
 /* QUESTIONS-- */
 .question{
     width: 100%;
-    height: 93vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -304,7 +296,7 @@ footer a{
 
     .nav-links{
         position: fixed; 
-        z-index: -1;
+        z-index: 10;
         top: 5rem;
         height:100%;
         width: 100%;
@@ -371,6 +363,7 @@ footer a{
 
 /*  IPHONE X */
 @media screen and (max-width:375px) and (max-height: 812px){
+
     nav{
         width: 100%;
         height: 3rem;
@@ -402,45 +395,33 @@ footer a{
         transition: all 0.3s ease;
     }
 
-    main{
-        min-height: 100vh;
-    }
-
     .question{
-        height: 100%;
-    }
-
-    .questionwrapper{
-        height: 100%;
-        width: 100%;
+        height: 100vh;
     }
 
     .question h1{
         font-size: 2.5rem;
+        padding-bottom: 5rem;
     }
 
     .one{
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),url(./imgs/Q1.jpg);
         background-size: cover;
-        
     }
     
     .two{
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q2.jpg);
-        background-size: cover;
-        
+        background-size: cover; 
     }
     
     .three{
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q3.jpg);
-        background-size: cover;
-        
+        background-size: cover;  
     }
     
     .four{
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q4.jpg);
-        background-size: cover;
-        
+        background-size: cover; 
     }
 
     .answer{
@@ -462,7 +443,7 @@ footer a{
     }
     
     footer{
-        height: 50%;
+        height: 50vh;
         flex-direction: column;
         padding-bottom: 5rem;
     }
