@@ -6,7 +6,10 @@
 html{
     scroll-snap-type: mandatory;
 	scroll-snap-points-y: repeat(100vh);
-	scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
+    -webkit-scroll-snap-type: mandatory;
+	-webkit-scroll-snap-points-y: repeat(100vh);
+	-webkit-scroll-snap-type: y mandatory;
 }
 
 body {
@@ -294,6 +297,28 @@ footer a{
 
 
 /* -- MEDIA QUERIES -- */
+@media (prefers-color-scheme: dark){
+    nav,
+    .navbackground,
+    .nav-links li,
+    .nav-links a,
+    .nav-active,
+    .answer,
+    footer,
+    .social i{
+        color: white;
+        background-color: black;
+    }
+    
+    .logo img,
+    footer img{
+        filter: invert(100%);
+    }
+
+    .burger div{
+        background-color: white;
+    }
+}
 @media screen and (max-width:1024px){
     body{
         overflow-x: hidden;
@@ -373,9 +398,11 @@ footer a{
         -moz-tap-highlight-color: rgba(0, 0, 0, 0);
     }
     html{
+        -webkit-overflow-scrolling: touch;
         scroll-snap-type: proximity;
 	    scroll-snap-points-y: repeat(100vh);
-	    scroll-snap-type: y proximity;
+        scroll-snap-type: y proximity;
+        
     }
     nav{
         width: 100%;
@@ -490,6 +517,7 @@ footer a{
     transform: scale(1,1);
     opacity: 1;
 }
+
 
 
 /* NAV BURGER */
