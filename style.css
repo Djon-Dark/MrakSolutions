@@ -297,28 +297,7 @@ footer a{
 
 
 /* -- MEDIA QUERIES -- */
-@media (prefers-color-scheme: dark){
-    nav,
-    .navbackground,
-    .nav-links li,
-    .nav-links a,
-    .nav-active,
-    .answer,
-    footer,
-    .social i{
-        color: white;
-        background-color: black;
-    }
-    
-    .logo img,
-    footer img{
-        filter: invert(100%);
-    }
 
-    .burger div{
-        background-color: white;
-    }
-}
 @media screen and (max-width:1024px){
     body{
         overflow-x: hidden;
@@ -518,7 +497,28 @@ footer a{
     opacity: 1;
 }
 
+@media (prefers-color-scheme: dark){
+    nav,
+    .navbackground,
+    .nav-active,
+    .answer,
+    footer,
+    .social i{
+        color: white;
+        background-color: black;
+    }
+    .nav-links a{
+        color: white;
+    }
+    .logo img,
+    footer img{
+        filter: invert(100%);
+    }
 
+    .burger div{
+        background-color: white;
+    }
+}
 
 /* NAV BURGER */
 .toggle .line1{    
