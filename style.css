@@ -28,7 +28,7 @@ nav{
     align-items: center;
     height: 5rem;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(27, 27, 27);/* COLORS */
     box-shadow: 0 -10px 20px 0px black;
     z-index: 10;
 }
@@ -47,6 +47,7 @@ nav{
 
 .logo img{
     height: 4rem;
+    filter: invert(100%);
 }
 
 .logo svg{
@@ -63,7 +64,7 @@ nav{
 }
 
 .nav-links a{
-    color: #000000;
+    color: #ffffff; /* COLORS */
     font-size: 1.1rem;
     text-decoration: none;
     font-weight: 400;
@@ -87,7 +88,7 @@ nav{
 .burger div{
     width: 30px;
     height: 5px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255); /* COLORS */
     transition: all 0.3s ease;
 }
 
@@ -219,6 +220,7 @@ i{
     height: 100vh;
     scroll-snap-align: end;
     padding: 0 3rem;
+    background-color: rgb(27, 27, 27); /* COLORS */
 }
 
 .text{
@@ -227,6 +229,7 @@ i{
     font-size: 1.5rem;
     opacity: 0;
     padding-right: 2rem;
+    color: white; /* COLORS */
 }
 
 .smallimg{
@@ -255,7 +258,8 @@ footer{
     height: 20rem;
     width: 100%;
     min-height: 50px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(27, 27, 27);/* COLORS */
+    color: white; /* COLORS */
     scroll-snap-align: end;
 }
 
@@ -263,6 +267,7 @@ footer img{
     height: 5vh;
     min-height: 40px;
     padding: 5px;
+    filter: invert(100%);
 }
 
 .social{
@@ -273,7 +278,7 @@ footer img{
 }
 
 .social i{
-    color: black;
+    color: rgb(255, 255, 255); /* COLORS */
     text-align: center;
 }
 
@@ -288,7 +293,7 @@ footer img{
 
 footer a{
     font-style: none;
-    color: black
+    color: black; /* COLORS */
 }
 
 ::-webkit-scrollbar{
@@ -309,7 +314,7 @@ footer a{
         top: 5rem;
         height:100%;
         width: 100%;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(27, 27, 27); /* COLORS */
         display: block;
         padding: 10%;
         flex-direction: column;
@@ -410,7 +415,7 @@ footer a{
     .burger div{
         width: 25px;
         height: 3px;
-        background-color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255); /* COLORS */
         transition: all 0.3s ease;
     }
 
@@ -497,26 +502,28 @@ footer a{
     opacity: 1;
 }
 
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: light){
     nav,
     .navbackground,
     .nav-active,
     .answer,
+    .answer .text,
     footer,
     .social i{
-        color: white;
-        background-color: black;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
     }
     .nav-links a{
-        color: white;
+        color: rgb(0, 0, 0);
     }
+   
     .logo img,
     footer img{
-        filter: invert(100%);
+        filter: invert(0);
     }
 
     .burger div{
-        background-color: white;
+        background-color: rgb(0, 0, 0);
     }
 }
 
