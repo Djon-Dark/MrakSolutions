@@ -531,3 +531,7 @@ footer a{
 .toggle .line3{    
     transform: rotate(45deg) translate(-1px,-9px);
 }
+
+.disablescroll{
+    overflow: hidden;
+}
