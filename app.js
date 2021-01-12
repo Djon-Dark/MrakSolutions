@@ -41,8 +41,8 @@ const debounce = (func, wait) => {
     };
   };
 
-  let ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-// TREBA MAKNUTI DEBOUNCE SA NORMALNOG EKRANA, PUSTITI SAMO NA MOBITELU
+let ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
 let prevScrollPos = window.pageYOffset; //to hide navbar, this must be outside of scroll event listener
 window.addEventListener('scroll', () => {
     let scrolldistance = window.pageYOffset;
@@ -53,8 +53,8 @@ window.addEventListener('scroll', () => {
         one.style.backgroundPositionY = scrolldistance * -0.5 + 'px';
     }
 });
-    // HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
 
+// HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
 window.addEventListener('scroll', debounce(()=>{
     if (ismobile) {
         const nav = document.querySelector("nav");
@@ -66,9 +66,13 @@ window.addEventListener('scroll', debounce(()=>{
         nav.style.top = "-3rem";
         }
         prevScrollPos = currentScrollPos;
-    }
-    
+    } 
 },250));      
+
+//WINDOW.INNER HEIGHT ZA SAKRITI NAVBAR TEST
+
+
+//WINDOW.INNER HEIGHT ZA SAKRITI NAVBAR TEST
 
 
 setInterval(function(){ 
@@ -115,16 +119,7 @@ setInterval(function(){
     fadeOut(arrow);
 }, 30);
 
-//NISAM ZICER AKO OVO RADI
-/*
-const resize = () => {
-    document.body.height = window.innerHeight;
-    body.style.height = window.innerHeight;
-    question.style.height = window.innerHeight;
-    answer.style.height = window.innerHeight;
-}
-window.onresize = resize();
-*/
+
 
 
 
