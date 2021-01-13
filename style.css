@@ -224,12 +224,16 @@ i{
 }
 
 .text{
-    width: 40rem;
+    width: 50rem;
     min-width: 18rem;
     font-size: 1.5rem;
     opacity: 0;
     padding-right: 2rem;
     color: white; /* COLORS */
+}
+
+.text p{
+    margin: 1rem;
 }
 
 .smallimg{
