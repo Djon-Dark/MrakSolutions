@@ -30,9 +30,6 @@ function parallax(element, distance, speed){
 }
 */
 
-
-
-
 const debounce = (func, wait) => {
     let timeout;
     return function () {
@@ -42,6 +39,7 @@ const debounce = (func, wait) => {
         }
     };
   };
+
 
 let ismobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
@@ -70,6 +68,13 @@ window.addEventListener('scroll', debounce(()=>{
         prevScrollPos = currentScrollPos;
     } 
 },250));      
+
+//RJESENJE ZA ANDROID NAVBAR SA WINDOW.INNERHEIGHT
+window.addEventListener('resize', debounce(()=>{
+    body.style.height = window.innerHeight;
+    console.log('body height: '+ window.innerHeight)
+    },500));
+//RJESENJE ZA ANDROID NAVBAR SA WINDOW.INNERHEIGHT
 
 //WINDOW.INNER HEIGHT ZA SAKRITI NAVBAR TEST
 
