@@ -68,13 +68,14 @@ window.addEventListener('scroll', debounce(()=>{
         prevScrollPos = currentScrollPos;
     } 
 },250));      
-
-//RJESENJE ZA ANDROID NAVBAR SA WINDOW.INNERHEIGHT
+/*
+//RJESENJE ZA ANDROID NAVBAR SA WINDOW.INNERHEIGHT - RADI ALI STEKA, TREBA TESTIRATI
 window.addEventListener('resize', ()=>{
     body.style.height = window.innerHeight+'px';
     console.log('body height: '+ window.innerHeight)
     });
 //RJESENJE ZA ANDROID NAVBAR SA WINDOW.INNERHEIGHT
+*/
 
 //WINDOW.INNER HEIGHT ZA SAKRITI NAVBAR TEST
 
