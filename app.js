@@ -71,7 +71,7 @@ window.addEventListener('scroll', debounce(()=>{
 
 //RJESENJE ZA ANDROID NAVBAR SA WINDOW.INNERHEIGHT
 window.addEventListener('resize', debounce(()=>{
-    body.style.height = window.innerHeight;
+    body.style.height = window.innerHeight+'px';
     console.log('body height: '+ window.innerHeight)
     },500));
 //RJESENJE ZA ANDROID NAVBAR SA WINDOW.INNERHEIGHT
