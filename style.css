@@ -225,7 +225,7 @@ i{
 }
 
 .text{
-    width: 40rem;
+    width: 50rem;
     min-width: 18rem;
     font-size: 1.5rem;
     opacity: 0;
@@ -234,7 +234,7 @@ i{
 }
 
 .text p{
-    margin: 1rem;
+    margin: 2rem;
     line-height: 2rem;
 }
 
@@ -424,7 +424,7 @@ footer a{
     }
 
     .question{
-        height: 100vh;
+        height: 120vh;
     }
 
     .question h1{
@@ -432,23 +432,27 @@ footer a{
         padding-bottom: 5rem;
     }
 
+    .one h1{
+        padding-bottom: 20rem;
+    }
+
     .one{
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),url(./imgs/Q1.jpg);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),url(./imgs/Q1small.jpg);
         background-size: cover;
     }
     
     .two{
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q2.jpg);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q2small.jpg);
         background-size: cover; 
     }
     
     .three{
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q3.jpg);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q3small.jpg);
         background-size: cover;  
     }
     
     .four{
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q4.jpg);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./imgs/Q4small.jpg);
         background-size: cover; 
     }
 
