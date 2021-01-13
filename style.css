@@ -235,6 +235,7 @@ i{
 
 .text p{
     margin: 1rem;
+    line-height: 2rem;
 }
 
 .smallimg{
