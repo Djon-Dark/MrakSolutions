@@ -2,14 +2,14 @@
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
-    const html = document.querySelector('html');
+    const body = document.querySelector('body');
 burger.addEventListener('click', ()=>{    
     //Toggle nav
         navLinks.classList.toggle('nav-active');
         
     //Burger Animation
     burger.classList.toggle('toggle');
-    html.classList.toggle('disablescroll');
+    body.classList.toggle('disablescroll');
 });
 }
 
