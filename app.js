@@ -5,8 +5,7 @@ const navSlide = () => {
     const body = document.querySelector('body');
 burger.addEventListener('click', ()=>{    
     //Toggle nav
-        navLinks.classList.toggle('nav-active');
-        
+    navLinks.classList.toggle('nav-active');   
     //Burger Animation
     burger.classList.toggle('toggle');
     body.classList.toggle('disablescroll');
@@ -23,6 +22,8 @@ const text = document.querySelectorAll('.text');
 const smallimg = document.querySelectorAll('.smallimg');
 const navactive = document.querySelector('.nav-links');
 const nav = document.querySelector('nav');
+
+
 /*  PARALLAX ZA H1 DOBAR, RADI
 function parallax(element, distance, speed){
     const item = document.querySelector(element);
@@ -128,6 +129,51 @@ setInterval(function(){
 }, 30);
 
 
+//*********OTHER PAGES**********
+const microcement = document.querySelector('.microcement');
+const onama = document.querySelector('.onama');
+const galerija = document.querySelector('.galerija');
+const kontakt = document.querySelector('.kontakt');
+const page = document.querySelector('.page');
+const onamaP = document.querySelector('.onamaP');
+const galerijaP = document.querySelector('.galerijaP');
+const kontaktP = document.querySelector('.kontaktP');
 
+//SHOW TAB ON CLICK, DISPLAY: NONE AFTER IT HIDES
+microcement.addEventListener('click', ()=>{
+        kontaktP.classList.remove('reveal');
+        galerijaP.classList.remove('reveal');
+        onamaP.classList.remove('reveal');
+})
 
+onama.addEventListener('click', ()=>{
+    body.classList.toggle('disablescroll');
+    onamaP.classList.remove('hide');
+    kontaktP.classList.remove('reveal');
+    galerijaP.classList.remove('reveal');
+    setTimeout(()=>{
+    onamaP.classList.toggle('reveal');
+    },200);
+})
+
+galerija.addEventListener('click', ()=>{
+    body.classList.toggle('disablescroll');
+    galerijaP.classList.remove('hide');
+    kontaktP.classList.remove('reveal');
+    onamaP.classList.remove('reveal');
+    setTimeout(()=>{
+    galerijaP.classList.toggle('reveal');
+    },200)
+})
+
+kontakt.addEventListener('click', ()=>{
+    body.classList.toggle('disablescroll');
+    kontaktP.classList.remove('hide');
+    galerijaP.classList.remove('reveal');
+    onamaP.classList.remove('reveal');
+    setTimeout(()=>{
+    kontaktP.classList.toggle('reveal');
+    kontaktP.classList.remove('hide');
+    },200)
+})
 
