@@ -579,6 +579,7 @@ footer a{
     overflow: hidden;
 }
 
+/* ===== PAGES =====*/
 .page{
     opacity: 0;
     z-index: 5;
@@ -586,27 +587,22 @@ footer a{
     height: 100vh;
     width: 100vw;
     background-color: rgb(27, 27, 27);
+    color: white;
     transition: 300ms ease;
+    top: 0;
 }
 
 .reveal{
     display: block;
+    top: 5vh;
     align-items: center;
-    margin-top: 7vh;
     opacity: 1;
     animation: h1Fade 300ms ease;
+    overflow: scroll;
 }
 
 .hide{
     display: none;
-}
-
-.contactpage{
-    position: relative;
-    top: 10vh;
-    opacity: inherit;
-    animation: inherit;
-    color: white
 }
 
 .page h1{
@@ -617,4 +613,97 @@ footer a{
     margin: 0;
     padding: 1rem;
     width: 100%;
+}
+
+.contactwrapper{
+    display: flex;
+    margin: 20vh auto;
+    width: 80vw;
+    max-width: 60rem;
+    padding: 2rem;
+    box-shadow:0 0 35px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.contactform{
+    width: 50%;
+    max-width: 30rem;
+    margin-right: 2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.formfield{
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px rgb(255, 255, 255);
+    height: 3rem;
+    color:rgb(255, 255, 255);
+}
+
+.message{
+    height: 10rem;
+}
+
+.sendbutton{
+    width: 40%;
+    height: 3rem;
+    margin: 1rem 1rem 1rem 0;
+    border-radius: 2rem;
+    border: none;
+    font-weight: bold;
+    transition: all 300ms ease;
+    box-shadow: 1px 5px 5px rgb(0, 0, 0);
+}
+
+.sendbutton:hover{
+    background-color: #FD4B59;
+    color: white;
+    box-shadow: 1px 2px 25px rgb(0, 0, 0);
+}
+
+.contactinfo{
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   justify-content: space-around;
+   padding: 2rem;
+   border-left: 1px solid white;
+}
+
+.inforow{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width:5rem;
+    height: 100%;
+}
+
+.info{
+    display: flex;
+}
+
+.contactinfo span{
+    color:rgb(180, 180, 180)
+}
+
+.contactinfo i{
+    color:rgb(255, 255, 255);
+    font-size: 2rem;
+    margin:1rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px rgb(27, 27, 27) inset !important;
+    box-shadow: 0 0 0 30px rgb(27, 27, 27) inset !important;
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
 }

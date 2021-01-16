@@ -155,6 +155,7 @@ onama.addEventListener('click', ()=>{
     onamaP.classList.toggle('reveal');
     disableScroll();
     },200);
+    
 })
 
 galerija.addEventListener('click', ()=>{
@@ -187,3 +188,8 @@ function disableScroll() {
     };
 }
 
+const hidden = (element)=>{
+    if(!element.classList.contains('reveal')){
+        element.classList.add('hide');
+    }
+}
