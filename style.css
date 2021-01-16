@@ -558,6 +558,10 @@ footer a{
     .burger div{
         background-color: rgb(0, 0, 0);
     }
+
+    .page{
+        background-color: white;
+    }
 }
 
 /* NAV BURGER */
