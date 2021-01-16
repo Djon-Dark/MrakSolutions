@@ -8,7 +8,7 @@ burger.addEventListener('click', ()=>{
     navLinks.classList.toggle('nav-active');   
     //Burger Animation
     burger.classList.toggle('toggle');
-    body.classList.toggle('disablescroll');
+    body.classList.toggle('scrolldisabled');
 });
 }
 
@@ -144,36 +144,46 @@ microcement.addEventListener('click', ()=>{
         kontaktP.classList.remove('reveal');
         galerijaP.classList.remove('reveal');
         onamaP.classList.remove('reveal');
+        body.classList.remove('scrolldisabled');
 })
 
 onama.addEventListener('click', ()=>{
-    body.classList.toggle('disablescroll');
     onamaP.classList.remove('hide');
     kontaktP.classList.remove('reveal');
     galerijaP.classList.remove('reveal');
     setTimeout(()=>{
     onamaP.classList.toggle('reveal');
+    disableScroll();
     },200);
 })
 
 galerija.addEventListener('click', ()=>{
-    body.classList.toggle('disablescroll');
+    body.classList.toggle('scrolldisabled');
     galerijaP.classList.remove('hide');
     kontaktP.classList.remove('reveal');
     onamaP.classList.remove('reveal');
     setTimeout(()=>{
     galerijaP.classList.toggle('reveal');
+    disableScroll();
     },200)
 })
 
 kontakt.addEventListener('click', ()=>{
-    body.classList.toggle('disablescroll');
+    body.classList.toggle('scrolldisabled');
     kontaktP.classList.remove('hide');
     galerijaP.classList.remove('reveal');
     onamaP.classList.remove('reveal');
     setTimeout(()=>{
     kontaktP.classList.toggle('reveal');
-    kontaktP.classList.remove('hide');
+    disableScroll();
     },200)
 })
+
+function disableScroll() {
+    if (onamaP.classList.contains('reveal')||galerijaP.classList.contains('reveal')||kontaktP.classList.contains('reveal')) {
+        body.classList.add('scrolldisabled');
+    } else {
+        body.classList.remove('scrolldisabled');
+    };
+}
 

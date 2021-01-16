@@ -571,12 +571,11 @@ footer a{
     transform: rotate(45deg) translate(-1px,-9px);
 }
 
-.disablescroll{
+.scrolldisabled{
     overflow: hidden;
 }
 
 .page{
-
     opacity: 0;
     z-index: 5;
     position: absolute;
