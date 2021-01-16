@@ -145,17 +145,25 @@ microcement.addEventListener('click', ()=>{
         galerijaP.classList.remove('reveal');
         onamaP.classList.remove('reveal');
         body.classList.remove('scrolldisabled');
+        setTimeout(()=>{
+            onamaP.classList.add('hide');
+            galerijaP.classList.add('hide');
+            kontaktP.classList.add('hide');
+        },200);
 })
 
 onama.addEventListener('click', ()=>{
+    body.classList.toggle('scrolldisabled');
     onamaP.classList.remove('hide');
     kontaktP.classList.remove('reveal');
     galerijaP.classList.remove('reveal');
     setTimeout(()=>{
-    onamaP.classList.toggle('reveal');
-    disableScroll();
+        onamaP.classList.toggle('reveal');
+        galerijaP.classList.add('hide');
+        kontaktP.classList.add('hide');
+        disableScroll();
     },200);
-    
+    hidden(onamaP);
 })
 
 galerija.addEventListener('click', ()=>{
@@ -164,9 +172,12 @@ galerija.addEventListener('click', ()=>{
     kontaktP.classList.remove('reveal');
     onamaP.classList.remove('reveal');
     setTimeout(()=>{
-    galerijaP.classList.toggle('reveal');
-    disableScroll();
+        galerijaP.classList.toggle('reveal');
+        onamaP.classList.add('hide');
+        kontaktP.classList.add('hide');
+        disableScroll();
     },200)
+    hidden(galerijaP);
 })
 
 kontakt.addEventListener('click', ()=>{
@@ -175,9 +186,12 @@ kontakt.addEventListener('click', ()=>{
     galerijaP.classList.remove('reveal');
     onamaP.classList.remove('reveal');
     setTimeout(()=>{
-    kontaktP.classList.toggle('reveal');
-    disableScroll();
-    },200)
+        kontaktP.classList.toggle('reveal');
+        onamaP.classList.add('hide');
+        galerijaP.classList.add('hide');
+        disableScroll();
+    },200);
+    hidden(kontaktP);
 })
 
 function disableScroll() {
@@ -189,7 +203,6 @@ function disableScroll() {
 }
 
 const hidden = (element)=>{
-    if(!element.classList.contains('reveal')){
-        element.classList.add('hide');
-    }
+    if(element.classList.contains('reveal')){
+        setTimeout(()=>{element.classList.add('hide')},400)}
 }

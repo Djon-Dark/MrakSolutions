@@ -301,6 +301,10 @@ footer img{
     color: #0261DB;  
 }
 
+#instagram:hover{
+    color: #D62976;
+}
+
 footer a{
     font-style: none;
     color: black; /* COLORS */
@@ -614,6 +618,19 @@ footer a{
     padding: 1rem;
     width: 100%;
 }
+/* ===== O NAMA ====== */
+/* ===== GALERIJA ====== */
+.gallerywrapper{
+    display: flex;
+    margin: 20vh auto;
+    width: 80vw;
+    max-width: 60rem;
+    padding: 2rem;
+    box-shadow:0 0 35px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+/* ===== KONTAKT ====== */
 
 .contactwrapper{
     display: flex;
@@ -622,7 +639,7 @@ footer a{
     max-width: 60rem;
     padding: 2rem;
     box-shadow:0 0 35px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 .contactform{
@@ -634,7 +651,7 @@ footer a{
 form{
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .formfield{
@@ -643,6 +660,7 @@ form{
     border-bottom: solid 1px rgb(255, 255, 255);
     height: 3rem;
     color:rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
 }
 
 .message{
@@ -658,6 +676,7 @@ form{
     font-weight: bold;
     transition: all 300ms ease;
     box-shadow: 1px 5px 5px rgb(0, 0, 0);
+    font-family: 'Raleway', sans-serif;
 }
 
 .sendbutton:hover{
