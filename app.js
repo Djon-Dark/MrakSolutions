@@ -139,7 +139,7 @@ const onamaP = document.querySelector('.onamaP');
 const galerijaP = document.querySelector('.galerijaP');
 const kontaktP = document.querySelector('.kontaktP');
 
-//SHOW TAB ON CLICK, DISPLAY: NONE AFTER IT HIDES
+// SHOW-HIDE PAGES
 microcement.addEventListener('click', ()=>{
         kontaktP.classList.remove('reveal');
         galerijaP.classList.remove('reveal');
@@ -206,3 +206,5 @@ const hidden = (element)=>{
     if(element.classList.contains('reveal')){
         setTimeout(()=>{element.classList.add('hide')},400)}
 }
+
+// GALLERY AUTO ADD
