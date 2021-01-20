@@ -38,7 +38,24 @@
     </div>
     <div class="page galerijaP hide">
         <div class="gallerywrapper">
-            <h1>Galerija</h1>
+            <div class="gallery">
+                <div class="image"><img src="./imgs/gallery/IMG1.jpg" alt="tranzicija kuhinja-terasa" data-original="IMG1.jpg"></div>
+                <div class="image"><img src="./imgs/gallery/IMG2.jpg" alt="Kupaona, tranzicija drvo" data-original="IMG2.jpg"></div>
+                <div class="image"><img src="./imgs/gallery/IMG3.jpg" alt="Blagovaona" data-original="IMG3.jpg"></div>
+                <div class="image"><img src="./imgs/gallery/IMG4.jpg" alt="Kupaona, kada, lavandin" data-original="IMG4.jpg"></div>
+                <div class="image"><img src="./imgs/gallery/IMG5.jpg" alt="Kupaona" data-original="IMG5.jpg"></div>
+                <div class="image"><img src="./imgs/gallery/IMG6.jpg" alt="Kamin i pod" data-original="IMG6.jpg"></div>
+                <div class="image"><img src="./imgs/gallery/IMG7.jpg" alt="Kupaona" data-original="IMG7.jpg"></div>
+                <div class="image"><img src="./imgs/gallery/IMG8.jpg" alt="Pod" data-original="IMG8.jpg"></div>
+                <div class="image"><img src="./imgs/gallery/IMG9.jpg" alt="Dnevni boravak" data-original="IMG9.jpg"></div>
+                <div class="image"><img src="./imgs/gallery/IMG10.jpg" alt="Bazen" data-original="IMG10.jpg"></div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="btn left"><i class="fas fa-caret-left"></i></div>
+            <div class="btn right"><i class="fas fa-caret-right"></i></div>
+            <img src="" alt="" class="full-image">
+            <p class="caption">OPISNI  TEKST</p>
         </div>
     </div>
     <div class="page kontaktP hide">
@@ -46,10 +63,10 @@
             <div class="contactform">
                 <form method="POST"  action="">
                     <h3>Slobodno nam se obratite!</h3>
-                    <input type="text" name="name" class="formfield" placeholder="Ime">
-                    <input type="text" name="lastname" class="formfield" placeholder="Prezime">
-                    <input type="text" name="email" class="formfield" placeholder="E-mail">
-                    <input type="text" name="message" class="formfield message" placeholder="Poruka">
+                    <input type="text" name="name" class="formfield" placeholder="Ime" required>
+                    <input type="text" name="lastname" class="formfield" placeholder="Prezime" required>
+                    <input type="text" name="email" class="formfield" placeholder="E-mail" required>
+                    <input type="text" name="message" class="formfield message" placeholder="Poruka" required>
                     <input type="submit" value="Pošalji poruku" class='sendbutton'>
                 </form>
             </div>
