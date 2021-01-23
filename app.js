@@ -208,15 +208,18 @@ const hidden = (element)=>{
 }
 
 // GALLERY
+
 const modal = document.querySelector('.modal');
 const previews = document.querySelectorAll('.gallery img');
 const original = document.querySelector('.full-image');
 const caption = document.querySelector('.caption');
 
+
+//Dev Ed style modal
 previews.forEach(preview => {
     preview.addEventListener('click', ()=>{
-        modal.classList.add('open');
-        original.classList.add('open')
+        openModal();
+        openOriginal();
         //dynamic change text and image
         const originalSrc = preview.getAttribute('data-original');
         original.src = `./imgs/gallery/${originalSrc}`;
@@ -224,7 +227,7 @@ previews.forEach(preview => {
         caption.textContent = altText;
     })
 })
-
+    //close modal and original
 modal.addEventListener('click',(e)=>{
     if(e.target.classList.contains('modal')){
         modal.classList.remove('open');
@@ -232,3 +235,24 @@ modal.addEventListener('click',(e)=>{
     }
 })
 
+function openModal() {
+    modal.classList.add('open');
+}
+
+function openOriginal() {
+    original.classList.add('open');
+}
+
+/*
+    //get index of clicked element, not in use
+let gallery = document.querySelector('.gallery');
+for (let i = 0; i < gallery.children.length; i++)
+{
+    (function(index){
+        const img = gallery.children;
+        img[i].onclick = function(){
+        alert(index);
+        }    
+    })(i);
+}
+*/

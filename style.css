@@ -588,17 +588,18 @@ footer a{
     opacity: 0;
     z-index: 5;
     position: absolute;
-    height: 100vh;
+    height: 98vh;
     width: 100vw;
     background-color: rgb(27, 27, 27);
     color: white;
     transition: 300ms ease;
     top: 0;
+    
 }
 
 .reveal{
     display: block;
-    top: 5vh;
+    top: 3rem;
     align-items: center;
     opacity: 1;
     animation: h1Fade 300ms ease;
@@ -619,10 +620,18 @@ footer a{
     width: 100%;
 }
 /* ===== O NAMA ====== */
+
+.about{
+    margin: 3rem auto;
+    width: 93vw;
+    padding: 1rem;
+    box-shadow:0 0 35px rgb(0, 0, 0);
+    border-radius: 1rem;
+}
+
 /* ===== GALERIJA ====== */
 .gallerywrapper{
-    display: flex;
-    margin: 10vh auto;
+    margin: 3rem auto;
     width: 93vw;
     padding: 1rem;
     box-shadow:0 0 35px rgb(0, 0, 0);
@@ -631,10 +640,8 @@ footer a{
 
 .gallery{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 1rem;
-    
 }
 
 .image img{
@@ -645,7 +652,7 @@ footer a{
 }
 
 .image{
-    
+    height: 300px;
 }
 
 .image img:hover{
@@ -698,24 +705,18 @@ footer a{
 .btn{
     position: fixed;
     top: 50%;
-    height: 50%;
-    width: 10%;
     font-size: 5rem;
     padding: 1rem;
     cursor: pointer;
     z-index: 16;
     display: flex;
     justify-content: center;
-    align-items: center;
     transform: translateY(-50%);
 }
 
 .btn i{
-    color:rgba(255, 255, 255, 0.1);
+    color:rgba(255, 255, 255, 0.3);
     transition: all 300ms ease;
-    height: 100%;
-    width: 100%;
-    line-height: 50vh;
 }
 
 .btn i:hover{
