@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lightbox.css">
+</head>
+<body>
+   
+    <div class="gallery">
+        <div class="image"><img src="./lightboxgallery/IMG1-small.jpg" onclick="openLightbox();toSlide(1)" alt="tranzicija kuhinja-terasa" ></div>
+        <div class="image"><img src="./lightboxgallery/IMG2-small.jpg" onclick="openLightbox();toSlide(2)" alt="Kupaona, tranzicija drvo"></div>
+        <div class="image"><img src="./lightboxgallery/IMG3-small.jpg" onclick="openLightbox();toSlide(3)" alt="Blagovaona" ></div>
+        <div class="image"><img src="./lightboxgallery/IMG4-small.jpg" onclick="openLightbox();toSlide(4)" alt="Kupaona, kada, lavandin" ></div>
+        <div class="image"><img src="./lightboxgallery/IMG5-small.jpg" onclick="openLightbox();toSlide(5)" alt="Kupaona"></div>
+        <div class="image"><img src="./lightboxgallery/IMG6-small.jpg" onclick="openLightbox();toSlide(6)" alt="Kamin i pod"></div>
+        <div class="image"><img src="./lightboxgallery/IMG7-small.jpg" onclick="openLightbox();toSlide(7)" alt="Kupaona"></div>
+        <div class="image"><img src="./lightboxgallery/IMG8-small.jpg" onclick="openLightbox();toSlide(8)" alt="Pod"></div>
+        <div class="image"><img src="./lightboxgallery/IMG9-small.jpg" onclick="openLightbox();toSlide(9)" alt="Dnevni boravak"></div>
+        <div class="image"><img src="./lightboxgallery/IMG10-small.jpg" onclick="openLightbox();toSlide(10)" alt="Bazen"></div>
+    </div>
+    <div id="Lightbox" class="modal">
+        <span class="close pointer" onclick="closeLightbox()">&times;</span>
+        <div class="modal-content">
+            <div class="slide"><img src="./lightboxgallery/IMG1.jpg" class="image-slide" alt="Toy car on the road." /></div>
+            <div class="slide"><img src="./lightboxgallery/IMG2.jpg" class="image-slide" alt="Toy car exploring offroad." /></div>
+            <div class="slide"><img src="./lightboxgallery/IMG3.jpg" class="image-slide" alt="Toy car in the city." /></div>
+            <div class="slide"><img src="./lightboxgallery/IMG4.jpg" class="image-slide" alt="Toy car in the city." /></div>
+            <div class="slide"><img src="./lightboxgallery/IMG5.jpg" class="image-slide" alt="Toy car in the city." /></div>
+            <div class="slide"><img src="./lightboxgallery/IMG6.jpg" class="image-slide" alt="Toy car in the city." /></div>
+            <div class="slide"><img src="./lightboxgallery/IMG7.jpg" class="image-slide" alt="Toy car in the city." /></div>
+            <div class="slide"><img src="./lightboxgallery/IMG8.jpg" class="image-slide" alt="Toy car in the city." /></div>
+            <div class="slide"><img src="./lightboxgallery/IMG9.jpg" class="image-slide" alt="Toy car in the city." /></div>
+            <div class="slide"><img src="./lightboxgallery/IMG10.jpg" class="image-slide" alt="Toy car in the city." /></div>
+        </div>
+        <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    
+</body>
+<script src="./lightbox.js"></script>
+</html>

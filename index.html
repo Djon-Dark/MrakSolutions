@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mrak Solutions</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="lightbox.css" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&family=Raleway:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
@@ -38,38 +39,63 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, placeat necessitatibus sit error quasi quas distinctio libero ut cupiditate ipsum nisi commodi architecto. Magni, ipsa aut. Esse quasi quas exercitationem?</p>
         </div>
     </div>
+
+<!-- GALLERY -->   
     <div class="page galerijaP hide">
-        <div class="gallerywrapper">
-            <div class="gallery">
-                <div class="image"><img src="./imgs/gallery/IMG1.jpg" alt="tranzicija kuhinja-terasa" data-original="IMG1.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG2.jpg" alt="Kupaona, tranzicija drvo" data-original="IMG2.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG3.jpg" alt="Blagovaona" data-original="IMG3.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG4.jpg" alt="Kupaona, kada, lavandin" data-original="IMG4.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG5.jpg" alt="Kupaona" data-original="IMG5.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG6.jpg" alt="Kamin i pod" data-original="IMG6.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG7.jpg" alt="Kupaona" data-original="IMG7.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG8.jpg" alt="Pod" data-original="IMG8.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG9.jpg" alt="Dnevni boravak" data-original="IMG9.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG10.jpg" alt="Bazen" data-original="IMG10.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG11.jpg" alt="Bazen" data-original="IMG11.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG12.jpg" alt="Bazen" data-original="IMG12.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG13.jpg" alt="Bazen" data-original="IMG13.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG14.jpg" alt="Bazen" data-original="IMG14.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG15.jpg" alt="Bazen" data-original="IMG15.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG16.jpg" alt="Bazen" data-original="IMG16.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG17.jpg" alt="Bazen" data-original="IMG17.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG18.jpg" alt="Bazen" data-original="IMG18.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG19.jpg" alt="Bazen" data-original="IMG19.jpg"></div>
-                <div class="image"><img src="./imgs/gallery/IMG20.jpg" alt="Bazen" data-original="IMG20.jpg"></div>
-            </div>
+        <div class="gallery">
+            <div class="image"><img src="./imgs/gallery/IMG1-small.jpg" onclick="openLightbox();toSlide(1)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG2-small.jpg" onclick="openLightbox();toSlide(2)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG3-small.jpg" onclick="openLightbox();toSlide(3)" alt="" ></div>
+            <div class="image"><img src="./imgs/gallery/IMG4-small.jpg" onclick="openLightbox();toSlide(4)" alt="" ></div>
+            <div class="image"><img src="./imgs/gallery/IMG5-small.jpg" onclick="openLightbox();toSlide(5)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG6-small.jpg" onclick="openLightbox();toSlide(6)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG7-small.jpg" onclick="openLightbox();toSlide(7)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG8-small.jpg" onclick="openLightbox();toSlide(8)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG9-small.jpg" onclick="openLightbox();toSlide(9)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG10-small.jpg" onclick="openLightbox();toSlide(10)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG11-small.jpg" onclick="openLightbox();toSlide(11)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG12-small.jpg" onclick="openLightbox();toSlide(12)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG13-small.jpg" onclick="openLightbox();toSlide(13)" alt="" ></div>
+            <div class="image"><img src="./imgs/gallery/IMG14-small.jpg" onclick="openLightbox();toSlide(14)" alt="" ></div>
+            <div class="image"><img src="./imgs/gallery/IMG15-small.jpg" onclick="openLightbox();toSlide(15)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG16-small.jpg" onclick="openLightbox();toSlide(16)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG17-small.jpg" onclick="openLightbox();toSlide(17)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG18-small.jpg" onclick="openLightbox();toSlide(18)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG19-small.jpg" onclick="openLightbox();toSlide(19)" alt=""></div>
+            <div class="image"><img src="./imgs/gallery/IMG20-small.jpg" onclick="openLightbox();toSlide(20)" alt=""></div>
         </div>
-        <div class="modal">
-            <div class="btn left"><i class="fas fa-caret-left"></i></div>
-            <div class="btn right"><i class="fas fa-caret-right"></i></div>
-            <img src="" alt="" class="full-image">
-            <p class="caption">OPISNI  TEKST</p>
+        <div id="Lightbox" class="modal">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <div class="modal-content">
+                <div class="slide"><img src="./imgs/gallery/IMG1.jpg" class="image-slide" alt="" />
+                <p>tranzicija kuhinja-terasa</p>
+                </div>
+                <div class="slide"><img src="./imgs/gallery/IMG2.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG3.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG4.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG5.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG6.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG7.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG8.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG9.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG10.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG11.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG12.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG13.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG14.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG15.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG16.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG17.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG18.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG19.jpg" class="image-slide" alt="" /></div>
+                <div class="slide"><img src="./imgs/gallery/IMG20.jpg" class="image-slide" alt="" /></div>
+            </div>
+            <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
     </div>
+
+    <!-- CONTACT -->
     <div class="page kontaktP hide">
         <div class="contactwrapper">
             <div class="contactform">
@@ -90,12 +116,14 @@
             </div>
         </div>
     </div>
+
+    <!-- MICROCEMENT -->
     <div class="navbackground"></div>
     <div class="question one">
         <div class="qbackground1"></div>
         <h1 class='questionH1' id='q1'>Što je MICROCEMENT?</h1>
         <div class="arrow bounce">
-            <i class="fa fa-angle-down fa-5x" aria-hidden="true"></i>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </div>
     <div class="answer">
@@ -173,5 +201,6 @@
         <p>Copyright: 2020 MrakSolutions</p>
     </footer>
     <script src="app.js"></script>
+    <script src="lightbox.js"></script>
 </body>
 </html>

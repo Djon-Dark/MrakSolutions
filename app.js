@@ -178,6 +178,7 @@ galerija.addEventListener('click', ()=>{
         disableScroll();
     },200)
     hidden(galerijaP);
+    closeLightbox();
 })
 
 kontakt.addEventListener('click', ()=>{
@@ -208,7 +209,7 @@ const hidden = (element)=>{
 }
 
 // GALLERY
-
+/*
 const modal = document.querySelector('.modal');
 const previews = document.querySelectorAll('.gallery img');
 const original = document.querySelector('.full-image');
