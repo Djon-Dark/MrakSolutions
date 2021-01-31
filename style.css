@@ -602,7 +602,6 @@ footer a{
     color: white;
     transition: 300ms ease;
     top: 0;
-    
 }
 
 .reveal{
@@ -628,120 +627,78 @@ footer a{
     width: 100%;
 }
 /* ===== O NAMA ====== */
-
-.about{
-    margin: 3rem auto;
-    width: 93vw;
-    padding: 1rem;
-    box-shadow:0 0 35px rgb(0, 0, 0);
-    border-radius: 1rem;
+.onamaP{
+    text-align: center;
 }
 
-/* ===== GALERIJA ====== */
-/*
-.gallerywrapper{
-    margin: 3rem auto;
-    width: 93vw;
-    padding: 1rem;
-    box-shadow:0 0 35px rgb(0, 0, 0);
-    border-radius: 1rem;
+.onamaP h2{
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    margin: 2rem auto;
+    color:rgba(255, 255, 255, 0.5)
 }
 
-.gallery{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
+.splash{
+    background-color: rgba(0, 0, 0);
+
 }
 
-.image img{
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
-    transition: all 200ms ease;
-}
-
-.image{
-    height: 300px;
-}
-
-.image img:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-.modal{
-    background: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: 0;
-    left: 0;
+.summary{
     width: 100%;
-    height: 100%;
-    z-index: 15;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.25s ease-out;
+    height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    text-align: center;
+    background:  linear-gradient(to bottom, rgba(0,0,0, 0.8), rgba(0,0,0,0.8)), url(./imgs/MS\ ABOUT\ dark\ scalable.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
 }
 
-.modal.open{
-    opacity: 1;
-    pointer-events: all;
+.summary p{
+    margin: 3rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
 }
 
-.full-image{
-    position: absolute;
-    height: 70%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.5);
-    transition: all 0.25s ease-out;
-    max-width: 95vw;
-    object-fit: contain;
-}
-
-.full-image.open{
-    transform: translate(-50%, -50%) scale(1);
-}
-
-.caption{
-    color: white;
-    font-size: 2rem;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, -5%);
-}
-
-.btn{
-    position: fixed;
-    top: 50%;
-    font-size: 5rem;
-    padding: 1rem;
-    cursor: pointer;
-    z-index: 16;
+.services{
+    text-align: center;
     display: flex;
     justify-content: center;
-    transform: translateY(-50%);
+    padding: 0 2rem;
+    margin-bottom: 2rem;
 }
 
-.btn i{
-    color:rgba(255, 255, 255, 0.3);
-    transition: all 300ms ease;
+.headline{
+    width: 100vw;
 }
 
-.btn i:hover{
-    color:rgb(255, 255, 255);  
-}
-
-.left{
-    left: 0;
+.service{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    max-width: 350px;
+    margin: 1rem;
     text-align: start;
 }
 
-.right{
-    right: 0;
-    text-align: end;
+.service h3{
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
-*/
+
+.heading{
+    text-align: center;
+}
+
+/* ===== GALERIJA ====== */
+
 
 /* ===== KONTAKT ====== */
 
