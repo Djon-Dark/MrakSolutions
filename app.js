@@ -1,8 +1,8 @@
 // BURGER NAVIGATION
 const navLinks = document.querySelector('.nav-links');
+const burger = document.querySelector('.burger');
 
 const navSlide = () => {
-    const burger = document.querySelector('.burger');
     const body = document.querySelector('body');
 burger.addEventListener('click', ()=>{    
     //Toggle nav
@@ -18,7 +18,8 @@ navSlide();
 function closeNavLinks(){
     setTimeout(()=>{
         navLinks.classList.remove('nav-active');
-    },300)
+        burger.classList.remove('toggle');
+    },200)
 }
 
 const body = document.querySelector('body');
@@ -158,7 +159,7 @@ microcement.addEventListener('click', ()=>{
             onamaP.classList.add('hide');
             galerijaP.classList.add('hide');
             kontaktP.classList.add('hide');
-        },200);
+        },90);
         closeNavLinks()
 })
 
@@ -175,7 +176,7 @@ onama.addEventListener('click', ()=>{
         galerijaP.classList.add('hide');
         kontaktP.classList.add('hide');
         disableScroll();
-    },200);
+    },90);
     hidden(onamaP);
     closeNavLinks()
 })
@@ -193,7 +194,7 @@ galerija.addEventListener('click', ()=>{
         onamaP.classList.add('hide');
         kontaktP.classList.add('hide');
         disableScroll();
-    },200)
+    },90)
     hidden(galerijaP);
     closeLightbox();
     closeNavLinks()
@@ -212,7 +213,7 @@ kontakt.addEventListener('click', ()=>{
         onamaP.classList.add('hide');
         galerijaP.classList.add('hide');
         disableScroll();
-    },200);
+    },90);
     hidden(kontaktP);
     closeNavLinks()
 })
@@ -227,7 +228,7 @@ function disableScroll() {
 
 const hidden = (element)=>{
     if(element.classList.contains('reveal')){
-        setTimeout(()=>{element.classList.add('hide')},400)}
+        setTimeout(()=>{element.classList.add('hide')},100)}
 }
 
 function pageActive(page){

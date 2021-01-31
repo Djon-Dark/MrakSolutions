@@ -357,13 +357,14 @@ footer a{
         justify-content: space-evenly;
         opacity: 0;
         transform-origin: top;
-        transform: scale(1,0);
+        transform: scale(1,0); /* POIGRAJ SE SA OVIME, DA BUDE KONZISTENTNO SA OSTATKOM STRANICE. AKO SE MAKNE SCALE, TREBA DODATI DISPLAY NONE, INACE NE RADI, SMETA NA DOMU*/
         transition: all 0.5s ease;
     }
     .nav-links li{
         height: 20%;
         width: 100%;
         text-align: center;
+        transition: none;
     }
 
     .nav-links a{
@@ -373,8 +374,7 @@ footer a{
 
     .nav-active a{
         opacity: 1;
-        transform: translateY(-1rem);
-        transition: all 0.5s ease;
+
     }
 
     .burger{
