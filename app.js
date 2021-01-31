@@ -138,9 +138,11 @@ const page = document.querySelector('.page');
 const onamaP = document.querySelector('.onamaP');
 const galerijaP = document.querySelector('.galerijaP');
 const kontaktP = document.querySelector('.kontaktP');
+const navBarLinks = document.querySelectorAll('.nav-links li');
 
 // SHOW-HIDE PAGES
 microcement.addEventListener('click', ()=>{
+        navBarLinks.forEach(link => link.classList.remove('active'));
         kontaktP.classList.remove('reveal');
         galerijaP.classList.remove('reveal');
         onamaP.classList.remove('reveal');
@@ -153,6 +155,9 @@ microcement.addEventListener('click', ()=>{
 })
 
 onama.addEventListener('click', ()=>{
+    pageActive(onama)
+    galerija.classList.remove('active');
+    kontakt.classList.remove('active');
     body.classList.toggle('scrolldisabled');
     onamaP.classList.remove('hide');
     kontaktP.classList.remove('reveal');
@@ -167,6 +172,9 @@ onama.addEventListener('click', ()=>{
 })
 
 galerija.addEventListener('click', ()=>{
+    pageActive(galerija);
+    onama.classList.remove('active');
+    kontakt.classList.remove('active');
     body.classList.toggle('scrolldisabled');
     galerijaP.classList.remove('hide');
     kontaktP.classList.remove('reveal');
@@ -182,6 +190,9 @@ galerija.addEventListener('click', ()=>{
 })
 
 kontakt.addEventListener('click', ()=>{
+    pageActive(kontakt);
+    onama.classList.remove('active');
+    galerija.classList.remove('active');
     body.classList.toggle('scrolldisabled');
     kontaktP.classList.remove('hide');
     galerijaP.classList.remove('reveal');
@@ -206,6 +217,10 @@ function disableScroll() {
 const hidden = (element)=>{
     if(element.classList.contains('reveal')){
         setTimeout(()=>{element.classList.add('hide')},400)}
+}
+
+function pageActive(page){
+    page.classList.toggle('active');
 }
 
 // GALLERY
