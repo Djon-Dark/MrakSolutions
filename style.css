@@ -34,7 +34,7 @@ nav{
     position: fixed;
     top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 5rem;
     width: 100%;
@@ -46,9 +46,9 @@ nav{
 .logo{
     display: flex;
     height: 7vh;
-    max-width: 400px;
+    width: 30%;
     align-items: center;
-    text-transform: uppercase; 
+    justify-content: center;
 }
 
 .logo a{
@@ -69,7 +69,7 @@ nav{
 
 .nav-links{
     display: flex;
-    width: 50%;
+    width: 60%;
     justify-content: space-between;
 }
 
@@ -85,8 +85,10 @@ nav{
 .nav-links li{
     list-style: none;
     height: 5rem;
+    width: 25%;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0 1rem;
     transition: 300ms ease;
     cursor: pointer;
@@ -337,6 +339,10 @@ footer a{
         overflow-x: hidden;
     }
 
+    nav{
+        justify-content: space-around;
+    }
+
     .nav-links{
         position: fixed; 
         z-index: 10;
@@ -345,7 +351,7 @@ footer a{
         width: 100%;
         background-color: rgb(27, 27, 27); /* COLORS */
         display: block;
-        padding: 10%;
+        padding-top: 10%;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
@@ -355,9 +361,9 @@ footer a{
         transition: all 0.5s ease;
     }
     .nav-links li{
-        height: 10%;
+        height: 20%;
+        width: 100%;
         text-align: center;
-        padding: 2rem 0;
     }
 
     .nav-links a{
@@ -605,7 +611,7 @@ footer a{
     position: absolute;
     height: 98vh;
     width: 100vw;
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(13,13,13);
     color: white;
     transition: 300ms ease;
     top: 0;
@@ -717,7 +723,7 @@ footer a{
     width: 80vw;
     max-width: 60rem;
     padding: 2rem;
-    box-shadow:0 0 35px rgba(0, 0, 0, 0.5);
+    box-shadow:0 0 35px rgba(0, 0, 0, 1);
     border-radius: 1rem;
 }
 

@@ -1,7 +1,8 @@
 // BURGER NAVIGATION
+const navLinks = document.querySelector('.nav-links');
+
 const navSlide = () => {
     const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
     const body = document.querySelector('body');
 burger.addEventListener('click', ()=>{    
     //Toggle nav
@@ -13,6 +14,12 @@ burger.addEventListener('click', ()=>{
 }
 
 navSlide();
+
+function closeNavLinks(){
+    setTimeout(()=>{
+        navLinks.classList.remove('nav-active');
+    },300)
+}
 
 const body = document.querySelector('body');
 const question = document.querySelector('.question');
@@ -152,6 +159,7 @@ microcement.addEventListener('click', ()=>{
             galerijaP.classList.add('hide');
             kontaktP.classList.add('hide');
         },200);
+        closeNavLinks()
 })
 
 onama.addEventListener('click', ()=>{
@@ -169,6 +177,7 @@ onama.addEventListener('click', ()=>{
         disableScroll();
     },200);
     hidden(onamaP);
+    closeNavLinks()
 })
 
 galerija.addEventListener('click', ()=>{
@@ -187,6 +196,7 @@ galerija.addEventListener('click', ()=>{
     },200)
     hidden(galerijaP);
     closeLightbox();
+    closeNavLinks()
 })
 
 kontakt.addEventListener('click', ()=>{
@@ -204,6 +214,7 @@ kontakt.addEventListener('click', ()=>{
         disableScroll();
     },200);
     hidden(kontaktP);
+    closeNavLinks()
 })
 
 function disableScroll() {
@@ -222,6 +233,8 @@ const hidden = (element)=>{
 function pageActive(page){
     page.classList.toggle('active');
 }
+
+
 
 // GALLERY
 /*

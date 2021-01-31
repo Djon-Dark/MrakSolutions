@@ -1,7 +1,7 @@
   *, *:before, *:after {
     box-sizing: inherit;
   }
-  
+
   .preview {
       width: 100%;
   }
@@ -13,8 +13,11 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 1rem;
     padding: 1rem;
+    background-color: rgb(13,13,13);
+    
     box-shadow:0 0 35px rgb(0, 0, 0);
     border-radius: 1rem;
+    
     width: 93vw;
   }
 
@@ -61,6 +64,7 @@
     width: 100%;
     opacity: 0;
     transition: 0.2s ease;
+    transform: translateY(3rem);
   }
 
   .slide img{
@@ -92,6 +96,7 @@
     cursor: pointer;
     position: fixed;
     top: 50%;
+    transform: translateY(3rem);
     width: auto;
     padding: 16px;
     margin-top: -50px;
