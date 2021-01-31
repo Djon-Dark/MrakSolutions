@@ -630,10 +630,10 @@ footer a{
 }
 
 .onamaP h2{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
-    margin: 2rem auto;
+    margin: 2rem auto 1rem auto;
     color:rgba(255, 255, 255, 0.5)
 }
 
@@ -644,7 +644,7 @@ footer a{
 
 .summary{
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -652,16 +652,17 @@ footer a{
     justify-content: center;
     max-width: 1200px;
     text-align: center;
-    background:  linear-gradient(to bottom, rgba(0,0,0, 0.8), rgba(0,0,0,0.8)), url(./imgs/MS\ ABOUT\ dark\ scalable.png);
+    background:  linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url(./imgs/MS\ ABOUT\ dark\ scalable.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 40%;
 }
 
 .summary p{
-    margin: 3rem;
+    margin: 2rem;
     line-height: 2rem;
     font-size: 1.5rem;
+    max-width: 1000px;
 }
 
 .services{
@@ -670,6 +671,7 @@ footer a{
     justify-content: center;
     padding: 0 2rem;
     margin-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .headline{
@@ -687,12 +689,12 @@ footer a{
 
 .service h3{
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 .heading{
-    text-align: center;
+    text-align: start;
 }
 
 /* ===== GALERIJA ====== */
