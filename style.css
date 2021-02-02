@@ -332,6 +332,227 @@ footer a{
 }
 
 
+
+/* ===== PAGES =====*/
+.page{
+    opacity: 0;
+    z-index: 5;
+    position: absolute;
+    height: 98vh;
+    width: 100vw;
+    background-color: rgb(13,13,13);
+    color: white;
+    transition: 300ms ease;
+    top: 0;
+}
+
+.reveal{
+    display: block;
+    top: 3rem;
+    align-items: center;
+    opacity: 1;
+    animation: h1Fade 300ms ease;
+    overflow: scroll;
+}
+
+.hide{
+    display: none;
+}
+
+.page h1{
+    font-size: 4rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: 0.1rem 0.1rem 1rem rgba(255, 255, 255, 0.5);
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* ===== O NAMA ====== */
+.onamaP{
+    text-align: center;
+}
+
+.onamaP h2{
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    margin: 2rem auto 1rem auto;
+    color:rgba(255, 255, 255, 0.5)
+}
+
+.splash{
+    background-color: rgba(0, 0, 0);
+
+}
+
+.summary{
+    width: 100%;
+    height: 58vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    text-align: center;
+    background:  linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url(./imgs/MS\ ABOUT\ dark\ scalable.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+}
+
+.summary p{
+    margin: 2rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    max-width: 1000px;
+}
+
+
+.services{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    
+}
+
+.servicewrapper{
+    width: 50%;
+    min-width: 450px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.headline{
+    width: 100vw;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    width: 50%;
+    max-width: 400px;
+    margin: 1rem;
+    text-align: start;
+}
+
+.service h3{
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.heading{
+    text-align: start;
+}
+
+/* ===== GALERIJA ====== */
+
+
+/* ===== KONTAKT ====== */
+
+.contactwrapper{
+    display: flex;
+    margin: 20vh auto;
+    width: 80vw;
+    max-width: 60rem;
+    padding: 2rem;
+    box-shadow:0 0 35px rgba(0, 0, 0, 1);
+    border-radius: 1rem;
+}
+
+.contactform{
+    width: 50%;
+    max-width: 30rem;
+    margin-right: 2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formfield{
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px rgb(255, 255, 255);
+    height: 3rem;
+    color:rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+}
+
+.message{
+    height: 10rem;
+}
+
+.sendbutton{
+    width: 40%;
+    height: 3rem;
+    margin: 1rem 1rem 1rem 0;
+    border-radius: 2rem;
+    border: none;
+    font-weight: bold;
+    transition: all 300ms ease;
+    box-shadow: 1px 5px 5px rgb(0, 0, 0);
+    font-family: 'Raleway', sans-serif;
+}
+
+.sendbutton:hover{
+    background-color: #FD4B59;
+    color: white;
+    box-shadow: 1px 2px 25px rgb(0, 0, 0);
+}
+
+.contactinfo{
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   justify-content: space-around;
+   padding: 2rem;
+   border-left: 1px solid white;
+}
+
+.inforow{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width:5rem;
+    height: 100%;
+}
+
+.info{
+    display: flex;
+}
+
+.contactinfo span{
+    color:rgb(180, 180, 180)
+}
+
+.contactinfo i{
+    color:rgb(255, 255, 255);
+    font-size: 2rem;
+    margin:1rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px rgb(27, 27, 27) inset !important;
+    box-shadow: 0 0 0 30px rgb(27, 27, 27) inset !important;
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+}
+
 /* -- MEDIA QUERIES -- */
 
 @media screen and (max-width:1024px){
@@ -398,6 +619,10 @@ footer a{
     .smallimg{
         min-height: 500px;
     }
+
+    .servicewrapper{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:1024px) and (max-height: 859px){
@@ -409,6 +634,19 @@ footer a{
         display: none;
     }
 }
+
+@media screen and (max-width:550px){
+    .services{
+        width: 100;
+    }
+    .servicewrapper{
+        width: 100%;
+    }
+    .service{
+        width: 100%;
+    }
+}
+
 
 /*  IPHONE X */
 @media screen and (max-width:375px) and (max-height: 812px){
@@ -602,212 +840,4 @@ footer a{
 
 .scrolldisabled{
     overflow: hidden;
-}
-
-/* ===== PAGES =====*/
-.page{
-    opacity: 0;
-    z-index: 5;
-    position: absolute;
-    height: 98vh;
-    width: 100vw;
-    background-color: rgb(13,13,13);
-    color: white;
-    transition: 300ms ease;
-    top: 0;
-}
-
-.reveal{
-    display: block;
-    top: 3rem;
-    align-items: center;
-    opacity: 1;
-    animation: h1Fade 300ms ease;
-    overflow: scroll;
-}
-
-.hide{
-    display: none;
-}
-
-.page h1{
-    font-size: 4rem;
-    font-weight: 400;
-    color: white;
-    text-shadow: 0.1rem 0.1rem 1rem rgba(255, 255, 255, 0.5);
-    margin: 0;
-    padding: 1rem;
-    width: 100%;
-}
-/* ===== O NAMA ====== */
-.onamaP{
-    text-align: center;
-}
-
-.onamaP h2{
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: 0.2rem;
-    margin: 2rem auto 1rem auto;
-    color:rgba(255, 255, 255, 0.5)
-}
-
-.splash{
-    background-color: rgba(0, 0, 0);
-
-}
-
-.summary{
-    width: 100%;
-    height: 58vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    text-align: center;
-    background:  linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url(./imgs/MS\ ABOUT\ dark\ scalable.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 40%;
-}
-
-.summary p{
-    margin: 2rem;
-    line-height: 2rem;
-    font-size: 1.5rem;
-    max-width: 1000px;
-}
-
-.services{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    padding: 0 2rem;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-}
-
-.headline{
-    width: 100vw;
-}
-
-.service{
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    max-width: 350px;
-    margin: 1rem;
-    text-align: start;
-}
-
-.service h3{
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.heading{
-    text-align: start;
-}
-
-/* ===== GALERIJA ====== */
-
-
-/* ===== KONTAKT ====== */
-
-.contactwrapper{
-    display: flex;
-    margin: 20vh auto;
-    width: 80vw;
-    max-width: 60rem;
-    padding: 2rem;
-    box-shadow:0 0 35px rgba(0, 0, 0, 1);
-    border-radius: 1rem;
-}
-
-.contactform{
-    width: 50%;
-    max-width: 30rem;
-    margin-right: 2rem;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-
-}
-
-.formfield{
-    background: transparent;
-    border: none;
-    border-bottom: solid 1px rgb(255, 255, 255);
-    height: 3rem;
-    color:rgb(255, 255, 255);
-    font-family: 'Raleway', sans-serif;
-}
-
-.message{
-    height: 10rem;
-}
-
-.sendbutton{
-    width: 40%;
-    height: 3rem;
-    margin: 1rem 1rem 1rem 0;
-    border-radius: 2rem;
-    border: none;
-    font-weight: bold;
-    transition: all 300ms ease;
-    box-shadow: 1px 5px 5px rgb(0, 0, 0);
-    font-family: 'Raleway', sans-serif;
-}
-
-.sendbutton:hover{
-    background-color: #FD4B59;
-    color: white;
-    box-shadow: 1px 2px 25px rgb(0, 0, 0);
-}
-
-.contactinfo{
-   display: flex;
-   flex-direction: column;
-   width: 50%;
-   justify-content: space-around;
-   padding: 2rem;
-   border-left: 1px solid white;
-}
-
-.inforow{
-    display: flex;
-    align-items: center;
-}
-
-.icon{
-    width:5rem;
-    height: 100%;
-}
-
-.info{
-    display: flex;
-}
-
-.contactinfo span{
-    color:rgb(180, 180, 180)
-}
-
-.contactinfo i{
-    color:rgb(255, 255, 255);
-    font-size: 2rem;
-    margin:1rem;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0 30px rgb(27, 27, 27) inset !important;
-    box-shadow: 0 0 0 30px rgb(27, 27, 27) inset !important;
-    -webkit-text-fill-color: rgb(255, 255, 255) !important;
 }
