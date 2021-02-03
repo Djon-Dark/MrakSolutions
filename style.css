@@ -458,7 +458,7 @@ footer a{
 .contactwrapper{
     display: flex;
     margin: 20vh auto;
-    width: 80vw;
+    width: 95%;
     max-width: 60rem;
     padding: 2rem;
     box-shadow:0 0 35px rgba(0, 0, 0, 1);
@@ -466,8 +466,7 @@ footer a{
 }
 
 .contactform{
-    width: 50%;
-    max-width: 30rem;
+    width: 40%;
     margin-right: 2rem;
 }
 
@@ -513,7 +512,7 @@ form{
    flex-direction: column;
    width: 50%;
    justify-content: space-around;
-   padding: 2rem;
+   padding-left: 2rem;
    border-left: 1px solid white;
 }
 
@@ -556,7 +555,7 @@ input:-webkit-autofill:active  {
     body{
         overflow-x: hidden;
     }
-
+    /* navbar */
     nav{
         justify-content: space-around;
     }
@@ -602,7 +601,7 @@ input:-webkit-autofill:active  {
         height: 20px;
         cursor: pointer;
     }
-
+    /* main */
     .answer{
         flex-direction: column;
         height: 100vh;
@@ -616,7 +615,7 @@ input:-webkit-autofill:active  {
     .smallimg{
         min-height: 500px;
     }
-
+    /* about */
     .services-inner-grid{
         width: 100%;
     }
@@ -632,6 +631,34 @@ input:-webkit-autofill:active  {
     }
 }
 
+@media screen and (max-width:768px){
+    /* contact */
+    .contactwrapper{
+        flex-direction: column-reverse; 
+        min-width: 300px;
+        max-width: 90%;
+    }
+
+    .contactinfo{
+        width: 100%;
+        border-left: none;
+        padding:0 0 2rem 0;
+    }
+
+    .icon{
+        width: 3rem;
+    }
+
+    .icon i{
+        margin-left: 0;
+    }
+
+    .contactform{
+        width: 100%;
+        margin: 0;
+    }
+}
+
 @media screen and (max-width:550px){
 
     .services-inner-grid{
@@ -643,8 +670,7 @@ input:-webkit-autofill:active  {
     }
 }
 
-
-/*  IPHONE X */
+    /*  IPHONE X */
 @media screen and (max-width:375px) and (max-height: 812px){
     * { 
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -794,9 +820,9 @@ input:-webkit-autofill:active  {
     opacity: 1;
 }
 
+    /* DARK-LIGHT THEME */
 @media (prefers-color-scheme: light){
     nav,
-    .navbackground,
     .nav-active,
     .answer,
     .answer .text,
