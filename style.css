@@ -632,6 +632,10 @@ input:-webkit-autofill:active  {
 }
 
 @media screen and (max-width:768px){
+    /* about */
+    .services-outer-grid{
+        padding-bottom: 2rem;
+    }
     /* contact */
     .contactwrapper{
         flex-direction: column-reverse; 
@@ -801,6 +805,20 @@ input:-webkit-autofill:active  {
     .sml4{
         background-image: url(./imgs/A4.jpg);
         background-size: cover;
+    }
+
+    /* about */
+    .summary{
+        height:inherit;
+    }
+
+
+    .services-inner-grid{
+        min-width: 100%;
+    }
+
+    .service{
+        margin: 1rem auto;
     }
 
     footer{
