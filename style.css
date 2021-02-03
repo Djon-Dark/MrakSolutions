@@ -411,7 +411,7 @@ footer a{
 }
 
 
-.services{
+.services-outer-grid{
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -422,7 +422,7 @@ footer a{
     
 }
 
-.servicewrapper{
+.services-inner-grid{
     width: 50%;
     min-width: 450px;
     display: flex;
@@ -620,9 +620,8 @@ input:-webkit-autofill:active  {
         min-height: 500px;
     }
 
-    .servicewrapper{
+    .services-inner-grid{
         width: 100%;
-    }
 }
 
 @media screen and (max-width:1024px) and (max-height: 859px){
@@ -636,12 +635,11 @@ input:-webkit-autofill:active  {
 }
 
 @media screen and (max-width:550px){
-    .services{
-        width: 100;
+
+    .services-inner-grid{
+        flex-wrap: wrap;
     }
-    .servicewrapper{
-        width: 100%;
-    }
+    
     .service{
         width: 100%;
     }
