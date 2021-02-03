@@ -11,19 +11,38 @@
     margin: 3rem auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1rem;
+    gap: 1rem;
     padding: 1rem;
-    background-color: rgb(13,13,13);
-    
-    box-shadow:0 0 35px rgb(0, 0, 0);
-    border-radius: 1rem;
-    
+    background-color: rgb(27,27,27);
     width: 93vw;
   }
 
+  .wide{
+    grid-column: span 2;
+  }
+  .tall{
+    grid-row: span 2;
+  }
+  /* bekap galerije
+  .gallery{
+    position: relative;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    padding: 1rem;
+    background-color: rgb(13,13,13);
+    box-shadow:0 0 35px rgb(0, 0, 0);
+    border-radius: 1rem;
+    width: 93vw;
+  }
+  */
+
   .image{
-    height: 300px;
+    border-radius: 0.2rem;
+    box-shadow:0 0 35px rgb(0, 0, 0);
     overflow: hidden;
+  
   }
   
   .image img{
@@ -31,11 +50,13 @@
     height: 100%;
     object-fit: cover;
     transition: all 300ms ease;
+    filter:brightness(0.8);
   }
 
   .image img:hover{
     transform: scale(1.05);
     cursor: pointer;
+    filter: none;
   }
 
   .modal {
