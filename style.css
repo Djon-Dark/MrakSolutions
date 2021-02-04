@@ -833,6 +833,17 @@ input:-webkit-autofill:active  {
     .service{
         width: 100%;
     }
+
+    /* footer */
+    footer{
+        height: 50vh;
+        flex-direction: column;
+        padding-bottom: 5rem;
+    }
+
+    .social{
+        width: 100%;
+    }
 }
 
     /*  IPHONE X */
@@ -975,7 +986,7 @@ input:-webkit-autofill:active  {
     }
 
     .services-outer-grid{
-        margin-bottom: 10rem;
+        margin-bottom: 12rem;
     }
 
     .services-inner-grid{
@@ -1003,6 +1014,21 @@ input:-webkit-autofill:active  {
         box-shadow: none  !important;
     }
 
+    textarea,
+    input.text,
+    input[type="text"],
+    input[type="button"],
+    input[type="submit"],
+    .input-checkbox {
+    -webkit-appearance: none;
+    border-radius: 0;
+    }
+
+    .sendbutton{
+        width: 100%;
+        font-size: 1rem;
+    }
+    
     /* footer */
     footer{
         height: 50vh;
