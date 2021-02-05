@@ -218,11 +218,20 @@ kontakt.addEventListener('click', ()=>{
     closeNavLinks()
 })
 
+// BODY SCROLL LOCK
+const bodyScrollLock = require('body-scroll-lock');
+const disableBodyScroll = bodyScrollLock.disableBodyScroll;
+const enableBodyScroll = bodyScrollLock.enableBodyScroll;
+const targetElement = document.querySelectorAll('.page');
+// BODY SCROLL LOCK
+
 function disableScroll() {
     if (onamaP.classList.contains('reveal')||galerijaP.classList.contains('reveal')||kontaktP.classList.contains('reveal')) {
         body.classList.add('scrolldisabled');
+        disableBodyScroll(targetElement); // BODY SCROLL LOCK
     } else {
         body.classList.remove('scrolldisabled');
+        enableBodyScroll(targetElement); // BODY SCROLL LOCK
     };
 }
 
@@ -234,6 +243,5 @@ const hidden = (element)=>{
 function pageActive(page){
     page.classList.toggle('active');
 }
-
 
 
