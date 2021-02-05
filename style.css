@@ -37,7 +37,7 @@ nav{
     width: 100%;
     background-color: rgb(27, 27, 27);/* COLORS */
     box-shadow: 0 -10px 20px 0px black;
-    z-index: 10;
+    z-index: 1;
 }
 
 .logo{
@@ -337,7 +337,6 @@ footer a{
 /* ===== PAGES =====*/
 .page{
     opacity: 0;
-    z-index: 5;
     position: absolute;
     height: 98vh;
     width: 100vw;
@@ -522,7 +521,6 @@ footer a{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -710,7 +708,6 @@ input:-webkit-autofill:active  {
 
     .nav-links{
         position: fixed; 
-        z-index: 10;
         top: 5rem;
         height:100%;
         width: 100%;
@@ -864,7 +861,7 @@ input:-webkit-autofill:active  {
         height: 3rem;
         transition: all 0.5s;
         position: fixed;
-        z-index: 10;
+        
     } 
 
     .logo{
