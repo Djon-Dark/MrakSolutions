@@ -234,14 +234,16 @@ kontakt.addEventListener('click', ()=>{
 const bodyScrollLock = require('body-scroll-lock');
 const disableBodyScroll = bodyScrollLock.disableBodyScroll;
 const enableBodyScroll = bodyScrollLock.enableBodyScroll;
-const targetElement = document.querySelectorAll('.page');
+const targetElement = document.querySelector('.page');
 // BODY SCROLL LOCK
 
 function disableScroll() {
     if (onamaP.classList.contains('reveal')||galerijaP.classList.contains('reveal')||kontaktP.classList.contains('reveal')) {
         body.classList.add('scrolldisabled');
+        bodyScrollLock.disableBodyScroll(targetElement);
     } else {
         body.classList.remove('scrolldisabled');
+        bodyScrollLock.enableBodyScroll(targetElement);
     };
 }
 

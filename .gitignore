@@ -1,8 +1,4 @@
 resource/body-scroll-lock-master.zip
-resource/body-scroll-lock/bodyScrollLock.es6.js
-resource/body-scroll-lock/bodyScrollLock.esm.js
-resource/body-scroll-lock/bodyScrollLock.js
-resource/body-scroll-lock/bodyScrollLock.min.js
 resource/body-scroll-lock-master/body-scroll-lock-master/.babelrc
 resource/body-scroll-lock-master/body-scroll-lock-master/.editorconfig
 resource/body-scroll-lock-master/body-scroll-lock-master/.eslintrc
