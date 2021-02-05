@@ -63,10 +63,20 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// HIDE NAVBAR ON INTERVAL, SHOW ON TOUCH
+/*
+window.addEventListener('touchstart', ()=>{
+    nav.style.top = "0";
+    setTimeout(()=>{
+        nav.style.top = '-3rem';
+    },3000)
+})
+*/
+
 // HIDE NAVBAR ON SCROLL DOWN, SHOW ON SCROLL UP
+/*
 window.addEventListener('scroll', debounce(()=>{
     if (ismobile) {
-        const nav = document.querySelector("nav");
         let scrolldistance = window.pageYOffset;
         let currentScrollPos = scrolldistance;             
         if(prevScrollPos > currentScrollPos || currentScrollPos < 20){
@@ -77,6 +87,8 @@ window.addEventListener('scroll', debounce(()=>{
         prevScrollPos = currentScrollPos;
     } 
 },250));      
+*/
+
 /*
 //RJESENJE ZA ANDROID NAVBAR SA WINDOW.INNERHEIGHT - RADI ALI STEKA, TREBA TESTIRATI
 window.addEventListener('resize', ()=>{
