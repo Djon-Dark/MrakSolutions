@@ -360,16 +360,6 @@ footer a{
     display: none;
 }
 
-.page h1{
-    font-size: 4rem;
-    font-weight: 400;
-    color: white;
-    text-shadow: 0.1rem 0.1rem 1rem rgba(255, 255, 255, 0.5);
-    margin: 0;
-    padding: 1rem;
-    width: 100%;
-}
-
 /* ===== O NAMA ====== */
 .onamaP{
     text-align: center;
@@ -978,6 +968,8 @@ input:-webkit-autofill:active  {
         background-size: cover;
     }
 
+    
+
     /* about */
     .summary{
         height:inherit;
@@ -1084,10 +1076,6 @@ input:-webkit-autofill:active  {
 
     .burger div{
         background-color: rgb(0, 0, 0);
-    }
-
-    .page{
-        background-color: white;
     }
 
     /* about */
