@@ -119,9 +119,9 @@ setInterval(function(){
      //CHECKS IF ELEMENT IS IN VIEW AND FADES IN
      const fadeIn = element =>{
         let top = element.getBoundingClientRect().top;
-        let bot = window.innerHeight - element.getBoundingClientRect().bottom;
+        let viewportHeight = window.innerHeight;
       
-        if(top > -100 && bot > -100){
+        if(top < viewportHeight-100){
             element.style.animation = 'h1Fade 1s ease-in';
             element.style.opacity = 1;
         }
@@ -132,7 +132,7 @@ setInterval(function(){
         let top = element.getBoundingClientRect().top;
         let viewportHeight = window.innerHeight;
       
-        if(top < viewportHeight-100 ){
+        if(top < viewportHeight-100){
             element.style.animation = 'h1Fade 0.5s linear, slideIn 0.5s ease-out';
             element.style.opacity = 1;
         }
