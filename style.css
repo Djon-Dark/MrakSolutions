@@ -968,12 +968,20 @@ input:-webkit-autofill:active  {
         background-size: cover;
     }
 
-    
+    /* pages */
+    .page{
+        position: static;
+        overflow: visible;
+        margin-top: 3rem;
+        height: auto;
+    }
+
 
     /* about */
     .summary{
         height:inherit;
         margin-top: 0;
+        
     }
 
     .services-outer-grid{

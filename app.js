@@ -23,7 +23,7 @@ function closeNavLinks(){
 }
 
 const body = document.querySelector('body');
-const question = document.querySelector('.question');
+
 const answer = document.querySelector('.answer');
 const questionH1 = document.querySelectorAll('.questionH1');
 const text = document.querySelectorAll('.text');
@@ -171,6 +171,7 @@ microcement.addEventListener('click', ()=>{
             onamaP.classList.add('hide');
             galerijaP.classList.add('hide');
             kontaktP.classList.add('hide');
+            hideMain();
         },90);
         closeNavLinks()
 })
@@ -188,6 +189,7 @@ onama.addEventListener('click', ()=>{
         galerijaP.classList.add('hide');
         kontaktP.classList.add('hide');
         disableScroll();
+        hideMain();
     },90);
     hidden(onamaP);
     closeNavLinks()
@@ -206,6 +208,7 @@ galerija.addEventListener('click', ()=>{
         onamaP.classList.add('hide');
         kontaktP.classList.add('hide');
         disableScroll();
+        hideMain();
     },90)
     hidden(galerijaP);
     closeLightbox();
@@ -225,17 +228,20 @@ kontakt.addEventListener('click', ()=>{
         onamaP.classList.add('hide');
         galerijaP.classList.add('hide');
         disableScroll();
+        hideMain();
     },90);
     hidden(kontaktP);
     closeNavLinks()
 })
 
 function disableScroll() {
-    if (onamaP.classList.contains('reveal')||galerijaP.classList.contains('reveal')||kontaktP.classList.contains('reveal')) {
-        body.classList.add('scrolldisabled');
-    } else {
-        body.classList.remove('scrolldisabled');
-    };
+    if(!ismobile){
+        if (onamaP.classList.contains('reveal')||galerijaP.classList.contains('reveal')||kontaktP.classList.contains('reveal')) {
+            body.classList.add('scrolldisabled');
+        } else {
+            body.classList.remove('scrolldisabled');
+        };
+    }
 }
 
 const hidden = (element)=>{
@@ -245,6 +251,25 @@ const hidden = (element)=>{
 
 function pageActive(page){
     page.classList.toggle('active');
+}
+
+// ****** TU SI STAO ********
+function hideMain(){
+    const question = document.querySelectorAll('.question');
+    const answer = document.querySelectorAll('.answer');
+
+    if(ismobile){
+        console.log('mobitel je');
+        if (onamaP.classList.contains('reveal')||galerijaP.classList.contains('reveal')||kontaktP.classList.contains('reveal')){
+            question.forEach(element=>element.classList.add('hide'));
+            answer.forEach(element=>element.classList.add('hide')); 
+            console.log('sakrij Q&A');
+        } else {
+            question.forEach(element=>element.classList.remove('hide'));
+            answer.forEach(element=>element.classList.remove('hide')); 
+            console.log('pokazi Q&A');
+        };
+    }
 }
 
 
