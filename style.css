@@ -463,6 +463,19 @@ footer a{
   width: 93vw;
 }
 
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 2rem;
+    color:rgb(180, 180, 180)
+}
+
+.intro h3{
+    margin-bottom: 1rem;
+}
+
 .wide{
   grid-column: span 2;
 }
