@@ -58,3 +58,15 @@ lightbox.addEventListener('click',(e)=>{
     }
 })
 
+//Full screen image - NOT FINISHED
+/*
+const expand_btn = document.querySelector('.expand_btn');
+const expand_toggle = document.querySelector('.expand_btn i');
+const modalimg = document.querySelectorAll('.slide img');
+
+expand_btn.addEventListener('click', ()=>{
+    modalimg.forEach(img => img.classList.toggle('expandIMG'));
+    expand_toggle.classList.toggle('fa-expand');
+    expand_toggle.classList.toggle('fa-compress');
+})
+*/
