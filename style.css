@@ -469,7 +469,7 @@ footer a{
     justify-content: space-evenly;
     text-align: center;
     padding: 2rem;
-    color:rgb(180, 180, 180)
+    color:rgb(180, 180, 180);
 }
 
 .intro h3{
@@ -599,6 +599,9 @@ footer a{
 }
 
 /* ===== KONTAKT ====== */
+.kontaktP{
+    background-image: url('/imgs/icon_pattern.jpg');
+}
 
 .contactwrapper{
     display: flex;
@@ -608,6 +611,7 @@ footer a{
     padding: 2rem;
     box-shadow:0 0 35px rgba(0, 0, 0, 1);
     border-radius: 1rem;
+    background-color: rgb(27, 27, 27);
 }
 
 .contactform{
@@ -1030,6 +1034,10 @@ input:-webkit-autofill:active  {
       }
 
     /* contact */
+    .kontaktP{
+        background-image: none;
+    }
+
     .contactwrapper{
         margin-top: 0;
         margin-bottom: 8rem;
@@ -1126,7 +1134,12 @@ input:-webkit-autofill:active  {
     }
 
     /* contact */
+    .kontaktP{
+        filter:invert(1);
+    }
     .contactwrapper{
+        filter:invert(1);
+        background-color: white;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
     .formfield{
