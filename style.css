@@ -724,7 +724,7 @@ input:-webkit-autofill:active  {
     }
 }
 
-@media screen and (max-width:1024px){
+@media screen and (max-width:970px){
     html{
         scroll-snap-type: none;
     }
@@ -810,14 +810,16 @@ input:-webkit-autofill:active  {
     .services-inner-grid{
         width: 100%;
     }
-}
 
-@media screen and (max-width:1024px) and (max-height: 859px){
-    .text{  
-        width: 90%;
+    /* footer */
+    footer{
+        height: 50vh;
+        flex-direction: column;
+        padding-bottom: 5rem;
     }
-    .smallimg{
-        display: none;
+
+    .social{
+        width: 100%;
     }
 }
 
@@ -865,9 +867,6 @@ input:-webkit-autofill:active  {
 
 @media screen and (max-width:550px){
     /* about */
-    .summary{
-        margin-top: 2rem;
-    }
     .services-inner-grid{
         flex-wrap: wrap;
     }
@@ -876,16 +875,7 @@ input:-webkit-autofill:active  {
         width: 100%;
     }
 
-    /* footer */
-    footer{
-        height: 50vh;
-        flex-direction: column;
-        padding-bottom: 5rem;
-    }
 
-    .social{
-        width: 100%;
-    }
 }
 
     /*  IPHONE X */
