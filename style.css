@@ -203,6 +203,7 @@ i{
     padding: 1rem;
     width: 100%;
     opacity: 0;
+    cursor: default;
 }
 
 #q1{
@@ -596,6 +597,7 @@ footer a{
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.8);
 }
 
 .next {
@@ -609,6 +611,7 @@ footer a{
   background-color: rgba(0, 0, 0, 0.8);
   filter: invert(1);
 }
+
 
 /* ===== KONTAKT ====== */
 .kontaktP{
@@ -711,6 +714,16 @@ input:-webkit-autofill:active  {
 }
 
 /* -- MEDIA QUERIES -- */
+@media (pointer:none), (pointer:coarse) {
+    html{
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    .previous:hover,
+    .next:hover {
+        background-color: rgba(0,0,0,0);
+        filter: none;
+    }
+}
 
 @media screen and (max-width:1024px){
     html{
@@ -1048,17 +1061,11 @@ input:-webkit-autofill:active  {
     .slide img{
         max-width: none;
         max-height: none;
-        width: 100vw;
+        width: 98vw;
     }
 
     .close{
         top: 3rem;
-    }
-
-    .previous:hover,
-    .next:hover {
-        background-color: rgba(0,0,0,0);
-        filter: none;
     }
 
     /* contact */

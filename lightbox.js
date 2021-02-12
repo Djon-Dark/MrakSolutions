@@ -1,5 +1,7 @@
 const lightbox = document.querySelector('#Lightbox');
 const slides = document.getElementsByClassName('slide');
+const previous = document.querySelector('.previous');
+const next = document.querySelector('.next');
 
 let slideIndex = 1;
 showSlide(slideIndex);
@@ -57,6 +59,10 @@ lightbox.addEventListener('click',(e)=>{
         closeLightbox();
     }
 })
+
+previous.addEventListener('click',()=>{changeSlide(-1)});
+next.addEventListener('click',()=>{changeSlide(1)}); //addeventlistener - ovako se mora pozvati funkcija s parametrima, inace vrati undefined
+
 
 //Full screen image - NOT FINISHED
 /*

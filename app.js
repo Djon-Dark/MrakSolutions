@@ -218,8 +218,3 @@ function hideMain(){
         };
     }
 }
-
-
-
-
-
