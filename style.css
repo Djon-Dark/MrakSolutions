@@ -112,7 +112,7 @@ nav{
 }
 
 .active{
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(0,0,0, 0.5) !important;
 }
 
  /* MAIN */
@@ -715,8 +715,14 @@ input:-webkit-autofill:active  {
 /* -- MEDIA QUERIES -- */
 @media (pointer:none), (pointer:coarse) {
     html{
+        scroll-snap-type: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
+
+    .nav-links li:hover{
+        background-color: rgba(0, 0, 0, 0);
+    }
+
     .previous:hover,
     .next:hover {
         background-color: rgba(0,0,0,0);
