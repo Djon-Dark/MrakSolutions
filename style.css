@@ -614,7 +614,7 @@ footer a{
 
 /* ===== KONTAKT ====== */
 .kontaktP{
-    background-image: url('/imgs/icon_pattern.jpg');
+    background-image: url('./imgs/icon_pattern.jpg');
 }
 
 .contactwrapper{
