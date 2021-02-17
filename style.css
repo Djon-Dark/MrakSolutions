@@ -314,11 +314,12 @@ footer img{
 .social i{
     color: rgb(255, 255, 255); /* COLORS */
     text-align: center;
+    transition: all 300ms ease;
 }
 
-.social i:hover{
+#pinterest:hover{
     color: rgb(180, 0, 0);
-    transition: all 300ms ease;
+    
 }
 
 #facebook:hover{
@@ -619,7 +620,9 @@ footer a{
 
 .contactwrapper{
     display: flex;
-    margin: 10vh auto;
+    justify-content: center;
+    align-items: center;
+    margin: 20vh auto;
     width: 95%;
     max-width: 60rem;
     padding: 2rem;
@@ -636,7 +639,10 @@ footer a{
 form{
     display: flex;
     flex-direction: column;
+}
 
+form h3{
+    font-size: 1.5rem;
 }
 
 .formfield{
@@ -646,14 +652,17 @@ form{
     height: 3rem;
     color:rgb(255, 255, 255); /* colors */
     font-family: 'Raleway', sans-serif;
+    outline: none;
 }
 
 .message{
     height: 10rem;
+    resize: none;
+    padding-top: 1rem;
 }
 
 .sendbutton{
-    width: 40%;
+    width: 100%;
     height: 3rem;
     margin: 1rem 1rem 1rem 0;
     border-radius: 2rem;
@@ -662,6 +671,7 @@ form{
     transition: all 300ms ease;
     box-shadow: 1px 5px 5px rgb(0, 0, 0);
     font-family: 'Raleway', sans-serif;
+    outline: none;
 }
 
 .sendbutton:hover{
@@ -691,6 +701,7 @@ form{
 
 .info{
     display: flex;
+    margin: 2rem 0;
 }
 
 .contactinfo span{
@@ -701,6 +712,12 @@ form{
     color:rgb(255, 255, 255);
     font-size: 2rem;
     margin:1rem;
+}
+
+.contactinfo .social{
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 2rem auto;
 }
 
 input:-webkit-autofill,
