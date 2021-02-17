@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mraksolu/public_html/
+    - export DEPLOYPATH=/home/mraksolu/public_html/MrakSolutions
     - /bin/cp -R imgs $DEPLOYPATH
     - /bin/cp -R fonts $DEPLOYPATH
     - /bin/cp index.html $DEPLOYPATH
