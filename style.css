@@ -319,7 +319,6 @@ footer img{
 
 #pinterest:hover{
     color: rgb(180, 0, 0);
-    
 }
 
 #facebook:hover{
@@ -746,6 +745,17 @@ input:-webkit-autofill:active  {
         background-color: rgba(0,0,0,0);
         filter: none;
     }
+    #pinterest:hover{
+        color: inherit;
+    }
+    
+    #facebook:hover{
+        color: inherit;
+    }
+    
+    #instagram:hover{
+        color: inherit;
+    }
 }
 
 @media screen and (max-width:970px){
@@ -779,7 +789,7 @@ input:-webkit-autofill:active  {
         justify-content: space-evenly;
         opacity: 0;
         transform-origin: top;
-        transform: scale(1,0); /* POIGRAJ SE SA OVIME, DA BUDE KONZISTENTNO SA OSTATKOM STRANICE. AKO SE MAKNE SCALE, TREBA DODATI DISPLAY NONE, INACE NE RADI, SMETA NA DOMU*/
+        transform: scale(1,0);
         transition: all 0.5s ease;
     }
     
@@ -1081,7 +1091,7 @@ input:-webkit-autofill:active  {
 
     /* contact */
     .kontaktP{
-        background-image: none;
+        background-image: none !important;
     }
 
     .contactwrapper{
@@ -1181,10 +1191,10 @@ input:-webkit-autofill:active  {
 
     /* contact */
     .kontaktP{
-        filter:invert(1);
+        background-image: url('./imgs/icon_pattern_light.jpg');
     }
     .contactwrapper{
-        filter:invert(1);
+
         background-color: white;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
