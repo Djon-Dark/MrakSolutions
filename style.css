@@ -724,8 +724,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0 300px rgb(27, 27, 27) inset !important;
-    box-shadow: 0 0 0 300px rgb(27, 27, 27) inset !important;
+    -webkit-box-shadow: 0 0 0 30px rgb(27, 27, 27) inset !important;
+    box-shadow: 0 0 0 30px rgb(27, 27, 27) inset !important;
     -webkit-text-fill-color: rgb(255, 255, 255) !important;
     font-family: inherit;
 }
@@ -803,7 +803,6 @@ input:-webkit-autofill:active  {
 
     .nav-active a{
         opacity: 1;
-
     }
 
     .burger{
@@ -913,7 +912,6 @@ input:-webkit-autofill:active  {
         height: 3rem;
         transition: all 0.5s;
         position: fixed;
-        
     } 
 
     .logo{
