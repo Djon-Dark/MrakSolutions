@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mraksolu/public_html/
+    - /bin/cp -R imgs $DEPLOYPATH
+    - /bin/cp -R fonts $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp app.js $DEPLOYPATH
+    - /bin/cp lightbox.js $DEPLOYPATH
