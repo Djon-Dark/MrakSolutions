@@ -344,7 +344,8 @@ footer a{
 .page{
     opacity: 0;
     position: absolute;
-    height: 98vh;
+    height: 97vh;
+    height: calc(100vh - 3rem);
     width: 100vw;
     background-color: rgb(27,27,27); /* COLORS */
     color: white; /* COLORS */
@@ -375,12 +376,14 @@ footer a{
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 0.2rem;
-    margin: 2rem auto 1rem auto;
+    margin: 1rem auto;
     color:rgba(255, 255, 255, 0.5);
 }
 
 .splash{
-    background-color: rgb(0, 0, 0); /* COLORS */
+    background-color: rgb(13,13,13); /* COLORS */
+    min-height: 60%;
+    display: flex;
 }
 
 .summary{
@@ -393,10 +396,11 @@ footer a{
     justify-content: center;
     max-width: 1200px;
     text-align: center;
-    background:  linear-gradient(to bottom, rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url(./imgs/MS\ ABOUT\ dark\ scalable.png);
+    background: url('./imgs/MS\ ABOUT\ dark\ scalable4.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 40%;
+    color: rgb(180, 180, 180);
 }
 
 .summary p{
@@ -406,14 +410,15 @@ footer a{
     max-width: 1000px;
 }
 
+.about_lower{
+    padding: 1rem;
+}
 
 .services-outer-grid{
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 2rem;
-    margin-bottom: 2rem;
 }
 
 .services-inner-grid{
@@ -840,6 +845,9 @@ input:-webkit-autofill:active  {
         height: 30%;
     }
     /* about */
+    .splash{
+        min-height: auto;
+    }
     .services-inner-grid{
         width: 100%;
     }
@@ -1168,8 +1176,7 @@ input:-webkit-autofill:active  {
 
     /* about */
     .splash,
-    .page h2,
-    .summary p{
+    .page h2{
         filter: invert(1);
     }
 
