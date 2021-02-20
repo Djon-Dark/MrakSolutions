@@ -170,7 +170,7 @@ galerija2.addEventListener('click', ()=>{
     pageActive(galerija);
     onama.classList.remove('active');
     kontakt.classList.remove('active');
-    body.classList.toggle('scrolldisabled');
+    //body.classList.toggle('scrolldisabled');
     galerijaP.classList.remove('hide');
     kontaktP.classList.remove('reveal');
     onamaP.classList.remove('reveal');
