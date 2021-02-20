@@ -377,7 +377,7 @@ footer a{
     font-weight: 500;
     letter-spacing: 0.2rem;
     margin: 1rem auto;
-    color:rgba(255, 255, 255, 0.5);
+    color: rgb(180, 180, 180);
 }
 
 .splash{
@@ -749,17 +749,6 @@ input:-webkit-autofill:active  {
     .next:hover {
         background-color: rgba(0,0,0,0);
         filter: none;
-    }
-    #pinterest:hover{
-        color: inherit;
-    }
-    
-    #facebook:hover{
-        color: inherit;
-    }
-    
-    #instagram:hover{
-        color: inherit;
     }
 }
 
