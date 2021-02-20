@@ -103,6 +103,7 @@ setInterval(function(){
 const microcement = document.querySelector('.microcement');
 const onama = document.querySelector('.onama');
 const galerija = document.querySelector('.galerija');
+const galerija2 = document.querySelector('#gallery_txt_btn');
 const kontakt = document.querySelector('.kontakt');
 const page = document.querySelector('.page');
 const onamaP = document.querySelector('.onamaP');
@@ -146,6 +147,26 @@ onama.addEventListener('click', ()=>{
 })
 
 galerija.addEventListener('click', ()=>{
+    pageActive(galerija);
+    onama.classList.remove('active');
+    kontakt.classList.remove('active');
+    body.classList.toggle('scrolldisabled');
+    galerijaP.classList.remove('hide');
+    kontaktP.classList.remove('reveal');
+    onamaP.classList.remove('reveal');
+    setTimeout(()=>{
+        galerijaP.classList.toggle('reveal');
+        onamaP.classList.add('hide');
+        kontaktP.classList.add('hide');
+        disableScroll();
+        hideMain();
+    },90)
+    hidden(galerijaP);
+    closeLightbox();
+    closeNavLinks()
+})
+
+galerija2.addEventListener('click', ()=>{
     pageActive(galerija);
     onama.classList.remove('active');
     kontakt.classList.remove('active');

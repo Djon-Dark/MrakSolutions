@@ -280,6 +280,10 @@ i{
     width: 100%;
     object-fit: cover;
 }
+
+#gallery_txt_btn{
+    color: rgb(179, 154, 71);
+}
 /* --ANSWERS */
 
 
