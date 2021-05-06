@@ -5,7 +5,7 @@
 
 html{
     scroll-snap-type: mandatory;
-	scroll-snap-points-y: repeat(100vh);
+    scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -1137,6 +1137,7 @@ input:-webkit-autofill:active  {
 
     /* DARK-LIGHT THEME */
 @media (prefers-color-scheme: light){
+    body,
     nav,
     .nav-active,
     .answer,
